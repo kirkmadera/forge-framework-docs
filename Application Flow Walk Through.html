@@ -1,0 +1,461 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="./manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Application Flow Walk Through | Forge Framework Documentation</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="kirkmadera">
+        <meta name="description" content="Forge Framework Documentation">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        
+        <link rel="prev" href="./index.html" />
+        
+
+        <meta property="og:title" content="Application Flow Walk Through | Forge Framework Documentation">
+        <meta property="og:site_name" content="Forge Framework Documentation">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/kirkmadera">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="1" data-basepath="." data-revision="1398964751691">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/kirkmadera/forge-framework-docs" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    
+    <a href="https://github.com/kirkmadera/forge-framework-docs/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/kirkmadera/forge-framework-docs/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="./" >Forge Framework Documentation</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/kirkmadera" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/kirkmadera/forge-framework-docs/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/kirkmadera/forge-framework-docs/edit/master/Application Flow Walk Through.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="Application Flow Walk Through.html">
+                
+                <a href="./Application Flow Walk Through.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Application Flow Walk Through
+                </a>
+                
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 100%;min-width: 0%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./Application Flow Walk Through.html" title="Application Flow Walk Through" class="chapter done new-chapter" data-progress="1" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_2">
+                    
+                        <h1 id="application-flow-walk-through">Application Flow Walk Through</h1>
+<p>Forge Framework application flow is exactly that of ZF2 with a few additions. Below is a quick walk through of the
+application flow.</p>
+<p>Forge Framework implements the Front Controller pattern where all requests are routed through a single point. This is
+an example of an index.php file which handles all incoming requests.</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-keyword">use</span> <span class="hljs-title">Zend</span>\<span class="hljs-title">Config</span>\<span class="hljs-title">Config</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">Zend</span>\<span class="hljs-title">Mvc</span>\<span class="hljs-title">Application</span>;
+
+<span class="hljs-comment">/**
+ * This makes our life easier when dealing with paths. Everything is relative
+ * to the application root now.
+ */</span>
+chdir(dirname(<span class="hljs-keyword">__DIR__</span>));
+
+<span class="hljs-comment">// Setup autoloading</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">'init_autoloader.php'</span>;
+
+<span class="hljs-comment">// Configure the application</span>
+<span class="hljs-variable">$config</span> = <span class="hljs-keyword">new</span> Config(<span class="hljs-keyword">require</span> <span class="hljs-string">'config/application.global.php'</span>);
+<span class="hljs-keyword">if</span> (file_exists(<span class="hljs-string">'config/application.local.php'</span>)) {
+    <span class="hljs-variable">$config</span>-&gt;merge(<span class="hljs-keyword">new</span> Config(<span class="hljs-keyword">require</span> <span class="hljs-string">'config/application.local.php'</span>));
+}
+
+<span class="hljs-comment">// Initialize and run the application</span>
+Application::init(<span class="hljs-variable">$config</span>)-&gt;run();
+</code></pre>
+<p>Lets break this file up into sections...</p>
+<h3 id="autoloading">Autoloading</h3>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">// Setup autoloading</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">'init_autoloader.php'</span>;
+</code></pre>
+<p>Forge Framework initially sets up autoloading based on composer configs and default loading for ZF2 and Forge Framework.
+Later in the application flow, modules add their autoload configuration as well.</p>
+<h3 id="application-configuration">Application Configuration</h3>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">// Configure the application!</span>
+<span class="hljs-variable">$config</span> = <span class="hljs-keyword">new</span> Config(<span class="hljs-keyword">require</span> <span class="hljs-string">'config/application.global.php'</span>);
+</code></pre>
+<p>This loads a global configuration file which is shared across all environments and is stored in version control. This
+configuration is the minimal configuration needed to load the application. All other configuration is done from within
+modules. This tells the application what modules to load in what order. It also tells the application where to find
+other application config files, which directories to use for different things, whether to enable caching, etc.</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">// application.global.php</span>
+<span class="hljs-keyword">return</span> [
+    <span class="hljs-string">'modules'</span> =&gt; [
+        <span class="hljs-string">'ForgeApplication'</span>,
+        <span class="hljs-string">'ForgeAcl'</span>,
+        <span class="hljs-string">'ForgeUser'</span>,
+        <span class="hljs-string">'ForgeAdmin'</span>,
+        <span class="hljs-string">'ForgeDeveloperTools'</span>,
+        <span class="hljs-string">'Application'</span>,
+    ],
+    <span class="hljs-string">'module_listener_options'</span> =&gt; [
+        <span class="hljs-string">'config_cache_enabled'</span> =&gt; <span class="hljs-keyword">false</span>,
+        <span class="hljs-string">'cache_dir'</span>            =&gt; <span class="hljs-string">'data/cache'</span>,
+        <span class="hljs-string">'config_glob_paths'</span>    =&gt; [
+            <span class="hljs-string">'config/autoload/{,*.}local.php'</span>,
+            <span class="hljs-string">'config/autoload/{,*.}global.php'</span>,
+        ],
+        <span class="hljs-string">'module_paths'</span> =&gt; [
+            <span class="hljs-string">'module/core'</span>,
+            <span class="hljs-string">'module/thirdparty'</span>,
+            <span class="hljs-string">'module/local'</span>,
+        ],
+    ],
+];
+</code></pre>
+<p>An environment specific file is then merged on top to allow for settings like enabling or disabling caching or enabling
+css/js merging and minification.</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-keyword">if</span> (file_exists(<span class="hljs-string">'config/application.local.php'</span>)) {
+    <span class="hljs-variable">$config</span>-&gt;merge(<span class="hljs-keyword">new</span> Config(<span class="hljs-keyword">require</span> <span class="hljs-string">'config/application.local.php'</span>));
+}
+</code></pre>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">// application.local.php</span>
+<span class="hljs-keyword">return</span> [
+    <span class="hljs-string">'module_listener_options'</span> =&gt; [
+        <span class="hljs-string">'config_cache_enabled'</span> =&gt; <span class="hljs-keyword">false</span>,
+    ],
+];
+</code></pre>
+<p>All configuration merging is done with array_replace_recursive logic with one exception. If all indexes of an array
+are numeric, the second array is merged on top of the first instead like array_merge. This is done using ZF2&#39;s built in
+Config class.</p>
+<h3 id="initialization">Initialization</h3>
+<p>The index file uses Application::init() to initialize the application. This is only a default configuration method for
+Forge Framework. The tasks within Application::init() could be placed directly into index.php as well if customization
+is needed.</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">// Initialize and run the application</span>
+Application::init(<span class="hljs-variable">$config</span>);
+</code></pre>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">// Zend\Mvc\Application</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span><span class="hljs-params">(<span class="hljs-variable">$configuration</span> = array<span class="hljs-params">()</span>)</span>
+{</span>
+    <span class="hljs-variable">$smConfig</span> = <span class="hljs-keyword">isset</span>(<span class="hljs-variable">$configuration</span>[<span class="hljs-string">'service_manager'</span>]) ? <span class="hljs-variable">$configuration</span>[<span class="hljs-string">'service_manager'</span>] : <span class="hljs-keyword">array</span>();
+    <span class="hljs-variable">$serviceManager</span> = <span class="hljs-keyword">new</span> ServiceManager(<span class="hljs-keyword">new</span> Service\ServiceManagerConfig(<span class="hljs-variable">$smConfig</span>));
+    <span class="hljs-variable">$serviceManager</span>-&gt;setService(<span class="hljs-string">'ApplicationConfig'</span>, <span class="hljs-variable">$configuration</span>);
+    <span class="hljs-variable">$serviceManager</span>-&gt;get(<span class="hljs-string">'ModuleManager'</span>)-&gt;loadModules();
+
+    <span class="hljs-variable">$listenersFromAppConfig</span>     = <span class="hljs-keyword">isset</span>(<span class="hljs-variable">$configuration</span>[<span class="hljs-string">'listeners'</span>]) ? <span class="hljs-variable">$configuration</span>[<span class="hljs-string">'listeners'</span>] : <span class="hljs-keyword">array</span>();
+    <span class="hljs-variable">$config</span>                     = <span class="hljs-variable">$serviceManager</span>-&gt;get(<span class="hljs-string">'Config'</span>);
+    <span class="hljs-variable">$listenersFromConfigService</span> = <span class="hljs-keyword">isset</span>(<span class="hljs-variable">$config</span>[<span class="hljs-string">'listeners'</span>]) ? <span class="hljs-variable">$config</span>[<span class="hljs-string">'listeners'</span>] : <span class="hljs-keyword">array</span>();
+
+    <span class="hljs-variable">$listeners</span> = array_unique(array_merge(<span class="hljs-variable">$listenersFromConfigService</span>, <span class="hljs-variable">$listenersFromAppConfig</span>));
+
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$serviceManager</span>-&gt;get(<span class="hljs-string">'Application'</span>)-&gt;bootstrap(<span class="hljs-variable">$listeners</span>);
+}
+</code></pre>
+<p>This sets up the service manager, loads all modules, then bootstraps the application.</p>
+<h4 id="the-service-manager">The Service Manager</h4>
+<p>The service manager is a service locator pattern. It also doubles as a dependency injection container. Through
+configuration, all classes and instances of classes can be substituted for others, initialized, run through factory
+constructors, and aliased. By default, the same instance of a class is returned every time it is requested from the
+service manager. A new object can be requested on demand. This effectively can be used as a singleton pattern as well.</p>
+<p>ZF2 previous to initial release had a dedicated dependency injection implementation. This was deemed overcomplicated for
+the average user to use or care about, but the service manager worked well enough and had a simple enough interface that
+it became a direct replacement. The service manager still falls back to the original dependency injection
+implementation when no service configuration can be found. For more information on the service manager, read the
+[ZF2 documentation] (<a href="http://framework.zend.com/manual/2.3/en/modules/zend.service-manager.quick-start.html" target="_blank">http://framework.zend.com/manual/2.3/en/modules/zend.service-manager.quick-start.html</a>).</p>
+<h4 id="module-loading">Module Loading</h4>
+<p>Modules are loaded in the order specified in the application configuration. This is event based.</p>
+<p>These are the relevant events:</p>
+<ul>
+<li>ModuleEvent::EVENT_LOAD_MODULES</li>
+<li>ModuleEvent::EVENT_LOAD_MODULE</li>
+<li>ModuleEvent::EVENT_LOAD_MODULES_POST</li>
+</ul>
+<p>The following tasks are performed for each module, via events:</p>
+<p>(Not entirely sure on the order. Need to review)</p>
+<ol>
+<li>Load module config</li>
+<li>Set up module autoloaders</li>
+<li>Check module dependencies</li>
+<li>Run init() method on module</li>
+<li>Add service manager settings from module to main service manager</li>
+<li>Add module, itself, to the service manager</li>
+<li>Attach the onBootstrap() method of each module to the bootstrap event which will be run once all modules are loaded</li>
+</ol>
+<h4 id="bootstrapping-the-application">Bootstrapping the Application</h4>
+<p>The application is bootstrapped once all modules are loaded and the configuration is complete. Routers are created based
+on the router map from the config.</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">// Zend\Application\Application</span>
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bootstrap</span><span class="hljs-params">(array <span class="hljs-variable">$listeners</span> = array<span class="hljs-params">()</span>)</span>
+{</span>
+    <span class="hljs-variable">$serviceManager</span> = <span class="hljs-variable">$this</span>-&gt;serviceManager;
+    <span class="hljs-variable">$events</span>         = <span class="hljs-variable">$this</span>-&gt;events;
+
+    <span class="hljs-variable">$listeners</span> = array_unique(array_merge(<span class="hljs-variable">$this</span>-&gt;defaultListeners, <span class="hljs-variable">$listeners</span>));
+
+    <span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$listeners</span> <span class="hljs-keyword">as</span> <span class="hljs-variable">$listener</span>) {
+        <span class="hljs-variable">$events</span>-&gt;attach(<span class="hljs-variable">$serviceManager</span>-&gt;get(<span class="hljs-variable">$listener</span>));
+    }
+
+    <span class="hljs-comment">// Setup MVC Event</span>
+    <span class="hljs-variable">$this</span>-&gt;event = <span class="hljs-variable">$event</span>  = <span class="hljs-keyword">new</span> MvcEvent();
+    <span class="hljs-variable">$event</span>-&gt;setTarget(<span class="hljs-variable">$this</span>);
+    <span class="hljs-variable">$event</span>-&gt;setApplication(<span class="hljs-variable">$this</span>)
+          -&gt;setRequest(<span class="hljs-variable">$this</span>-&gt;request)
+          -&gt;setResponse(<span class="hljs-variable">$this</span>-&gt;response)
+          -&gt;setRouter(<span class="hljs-variable">$serviceManager</span>-&gt;get(<span class="hljs-string">'Router'</span>));
+
+    <span class="hljs-comment">// Trigger bootstrap events</span>
+    <span class="hljs-variable">$events</span>-&gt;trigger(MvcEvent::EVENT_BOOTSTRAP, <span class="hljs-variable">$event</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$this</span>;
+}
+</code></pre>
+<p>This enables the default route, dispatch, and view listeners, sets up the MvcEvent, and triggers the bootstrap event.
+Modules may implement an &quot;onBootstrap&quot; method. This method is run after the rest of the application has been initialized.
+This is the point where modules have all access to everything they may need within the application. Most module
+initialization should occur here.</p>
+<h3 id="running-the-application">Running the Application</h3>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">// Zend\Application\Application</span>
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">run</span><span class="hljs-params">()</span>
+{</span>
+    <span class="hljs-variable">$events</span> = <span class="hljs-variable">$this</span>-&gt;events;
+    <span class="hljs-variable">$event</span>  = <span class="hljs-variable">$this</span>-&gt;event;
+
+    <span class="hljs-comment">// Define callback used to determine whether or not to short-circuit</span>
+    <span class="hljs-variable">$shortCircuit</span> = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(<span class="hljs-variable">$r</span>)</span> <span class="hljs-title">use</span> <span class="hljs-params">(<span class="hljs-variable">$event</span>)</span> {</span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-variable">$r</span> <span class="hljs-keyword">instanceof</span> ResponseInterface) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        }
+        <span class="hljs-keyword">if</span> (<span class="hljs-variable">$event</span>-&gt;getError()) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    };
+
+    <span class="hljs-comment">// Trigger route event</span>
+    <span class="hljs-variable">$result</span> = <span class="hljs-variable">$events</span>-&gt;trigger(MvcEvent::EVENT_ROUTE, <span class="hljs-variable">$event</span>, <span class="hljs-variable">$shortCircuit</span>);
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable">$result</span>-&gt;stopped()) {
+        <span class="hljs-variable">$response</span> = <span class="hljs-variable">$result</span>-&gt;last();
+        <span class="hljs-keyword">if</span> (<span class="hljs-variable">$response</span> <span class="hljs-keyword">instanceof</span> ResponseInterface) {
+            <span class="hljs-variable">$event</span>-&gt;setTarget(<span class="hljs-variable">$this</span>);
+            <span class="hljs-variable">$event</span>-&gt;setResponse(<span class="hljs-variable">$response</span>);
+            <span class="hljs-variable">$events</span>-&gt;trigger(MvcEvent::EVENT_FINISH, <span class="hljs-variable">$event</span>);
+            <span class="hljs-variable">$this</span>-&gt;response = <span class="hljs-variable">$response</span>;
+            <span class="hljs-keyword">return</span> <span class="hljs-variable">$this</span>;
+        }
+        <span class="hljs-keyword">if</span> (<span class="hljs-variable">$event</span>-&gt;getError()) {
+            <span class="hljs-keyword">return</span> <span class="hljs-variable">$this</span>-&gt;completeRequest(<span class="hljs-variable">$event</span>);
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-variable">$this</span>;
+    }
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable">$event</span>-&gt;getError()) {
+        <span class="hljs-keyword">return</span> <span class="hljs-variable">$this</span>-&gt;completeRequest(<span class="hljs-variable">$event</span>);
+    }
+
+    <span class="hljs-comment">// Trigger dispatch event</span>
+    <span class="hljs-variable">$result</span> = <span class="hljs-variable">$events</span>-&gt;trigger(MvcEvent::EVENT_DISPATCH, <span class="hljs-variable">$event</span>, <span class="hljs-variable">$shortCircuit</span>);
+
+    <span class="hljs-comment">// Complete response</span>
+    <span class="hljs-variable">$response</span> = <span class="hljs-variable">$result</span>-&gt;last();
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable">$response</span> <span class="hljs-keyword">instanceof</span> ResponseInterface) {
+        <span class="hljs-variable">$event</span>-&gt;setTarget(<span class="hljs-variable">$this</span>);
+        <span class="hljs-variable">$event</span>-&gt;setResponse(<span class="hljs-variable">$response</span>);
+        <span class="hljs-variable">$events</span>-&gt;trigger(MvcEvent::EVENT_FINISH, <span class="hljs-variable">$event</span>);
+        <span class="hljs-variable">$this</span>-&gt;response = <span class="hljs-variable">$response</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-variable">$this</span>;
+    }
+
+    <span class="hljs-variable">$response</span> = <span class="hljs-variable">$this</span>-&gt;response;
+    <span class="hljs-variable">$event</span>-&gt;setResponse(<span class="hljs-variable">$response</span>);
+    <span class="hljs-variable">$this</span>-&gt;completeRequest(<span class="hljs-variable">$event</span>);
+
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$this</span>;
+}
+</code></pre>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">// Zend\Application\Application</span>
+<span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">completeRequest</span><span class="hljs-params">(MvcEvent <span class="hljs-variable">$event</span>)</span>
+{</span>
+    <span class="hljs-variable">$events</span> = <span class="hljs-variable">$this</span>-&gt;events;
+    <span class="hljs-variable">$event</span>-&gt;setTarget(<span class="hljs-variable">$this</span>);
+    <span class="hljs-variable">$events</span>-&gt;trigger(MvcEvent::EVENT_RENDER, <span class="hljs-variable">$event</span>);
+    <span class="hljs-variable">$events</span>-&gt;trigger(MvcEvent::EVENT_FINISH, <span class="hljs-variable">$event</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$this</span>;
+}
+</code></pre>
+<p>The application is now set up and the request can be handled.</p>
+<p>The first step is to attempt to route the request. The request URI is mapped to a route defined within the configuration.
+If the URI cannot be mapped, a 404 page is served. The request may also directly lead to a redirect. If so, the redirect
+is issued immediately. If a controller action can be determined from the request, the application dispatches to the
+controller. If the controller action does not exist, a 404 page is served. If it does exist, the action is executed.</p>
+<p>The controller action may return a number of different response types. Depending on the response returned, a specific
+listener will pick the response up and process it.</p>
+<p>These are the current possible return types and their behaviors:</p>
+<ul>
+<li>null - A simple view object is constructed using the module, controller, and action name to grab a template</li>
+<li>array() - The same view is constructed as null, except that the data provided in the array is made available as variables
+in the view script.</li>
+<li>JsonViewModel - Will be rendered directly as JSON</li>
+<li>ViewModel - No post processing is done. The view model is rendered as is</li>
+<li>CompositeViewModel - The view model is rendered via Forge Framework&#39;s composite view strategy</li>
+<li>Response - If a direct response object is returned, it will be rendered directly as is without any rendering strategy</li>
+</ul>
+<p>These views are rendered by listeners of the MvcEvent::EVENT_RENDER event. New listeners can be attached to watch for
+different response types. For example, if xml output needed to be rendered, a listener could be registered to watch for
+a return type of SimpleXml.</p>
+<p>Finally, the MvcEvent::EVENT_FINISH event fires. This handles the actual output to the browser. Headers are send first,
+then, the output is sent.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./index.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="gitbook/app.js"></script>
+        
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>
