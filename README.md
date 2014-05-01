@@ -1,7 +1,10 @@
 Forge Framework
 ===============
 
-Forge Framework is currently under development. We are internally using gitbook and github.io to generate documentation only. This is intended to be an open source project, but will not be released it until it has reached a certain level of stability. The framework is currently under active development. No specific release date has been set, but it will likely be sometime in early 2015. 
+> Forge Framework is currently under development. We are internally using gitbook and github.io to generate 
+> documentation only. This is intended to be an open source project, but will not be released it until it has 
+> reached a certain level of stability. The framework is currently under active development. No specific 
+> release date has been set, but it will likely be sometime in early 2015. 
 
 Forge Framework is an application level framework that runs on Zend Framework 2. The purpose of Forge Framework is to
 provide prebuilt application components, fully functional out of the box, with flexible customization strategies that
