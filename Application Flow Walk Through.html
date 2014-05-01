@@ -1,30 +1,28 @@
 <!DOCTYPE HTML>
-<html lang="en-US">
+<html lang="en-US" manifest="./manifest.appcache">
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Introduction | Forge Framework</title>
+        <title>Application Flow Walk Through | Forge Framework Documentation</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
-        <meta name="author" content="">
-        <meta name="description" content="Forge Framework is an application level framework that runs on Zend Framework 2. The purpose of Forge Framework is to
-provide prebuilt application components, fully functional out of the box, with flexible customization strategies that
-offer full control to the user but do not break the upgrade path.">
+        <meta name="author" content="kirkmadera">
+        <meta name="description" content="Forge Framework Documentation">
         <meta name="keywords" content="gitbook,github" >
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="./Application Flow Walk Through.html" />
         
+        <link rel="prev" href="./index.html" />
         
 
-        <meta property="og:title" content="Introduction | Forge Framework">
-        <meta property="og:site_name" content="Forge Framework">
+        <meta property="og:title" content="Application Flow Walk Through | Forge Framework Documentation">
+        <meta property="og:site_name" content="Forge Framework Documentation">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
 
-        <meta property="book:author" content="https://github.com/">
+        <meta property="book:author" content="https://github.com/kirkmadera">
         <meta property="book:tag" content="GitBook">
 
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -42,9 +40,11 @@ offer full control to the user but do not break the upgrade path.">
 
 
         
-    <div class="book"  data-level="0" data-basepath="." data-revision="1398919558535">
+    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="1" data-basepath="." data-revision="1398964751691">
     <div class="book-header">
     <!-- Actions Left -->
+    
+    <a href="https://github.com/kirkmadera/forge-framework-docs" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
     
     <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
@@ -82,9 +82,15 @@ offer full control to the user but do not break the upgrade path.">
     <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
 
     
+    <a href="https://github.com/kirkmadera/forge-framework-docs/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/kirkmadera/forge-framework-docs/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
 
     <!-- Title -->
-    <h1><a href="./" >Forge Framework</a></h1>
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="./" >Forge Framework Documentation</a>
+    </h1>
 </div>
 
     <div class="book-summary">
@@ -92,6 +98,17 @@ offer full control to the user but do not break the upgrade path.">
         <input type="text" placeholder="Search" class="form-control" />
     </div>
     <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/kirkmadera" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/kirkmadera/forge-framework-docs/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/kirkmadera/forge-framework-docs/edit/master/Application Flow Walk Through.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
         
         <li data-level="0" data-path="index.html">
             <a href="./"><i class="fa fa-check"></i> Introduction</a>
@@ -114,35 +131,22 @@ offer full control to the user but do not break the upgrade path.">
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 0%;min-width: 0%;"></div>
+        <div class="inner" style="width: 100%;min-width: 0%;"></div>
     </div>
     <div class="chapters">
     
         <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
     
-        <a href="./Application Flow Walk Through.html" title="Application Flow Walk Through" class="chapter  new-chapter" data-progress="1" style="left: 100%;"></a>
+        <a href="./Application Flow Walk Through.html" title="Application Flow Walk Through" class="chapter done new-chapter" data-progress="1" style="left: 100%;"></a>
     
     </div>
 </div>
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_63">
+                    <section class="normal" id="section-gitbook_2">
                     
-                        <h1 id="forge-framework">Forge Framework</h1>
-<p>Forge Framework is an application level framework that runs on Zend Framework 2. The purpose of Forge Framework is to
-provide prebuilt application components, fully functional out of the box, with flexible customization strategies that
-offer full control to the user but do not break the upgrade path.</p>
-<p>Zend Framework was chosen because of it&#39;s maturity, documentation, coding standards, loosely coupled libraries, and
-event based MVC architecture. The event based architecture of ZF2 made it easy to introduce new Forge Framework
-functionality in a non intrusive way.</p>
-<p>A concerted effort was made to use Zend Framework 2 functionality as is where possible. All ZF2 documentation can be
-relied upon to work with Forge Framework except where specifically noted. ZF2 community modules may be used directly
-with Forge Framework. This is extremely useful for quickly testing ZF2 modules. However, to fully utilize Forge Framework&#39;s
-view building capabilities, some customization is required.</p>
-<p>Forge Framework also shares many similarities with Magento. For example, the composite view strategy based in layout
-configuration files is based off of Magento&#39;s view strategy.</p>
-<h2 id="a-quick-walk-through">A Quick Walk Through</h2>
+                        <h1 id="application-flow-walk-through">Application Flow Walk Through</h1>
 <p>Forge Framework application flow is exactly that of ZF2 with a few additions. Below is a quick walk through of the
 application flow.</p>
 <p>Forge Framework implements the Front Controller pattern where all requests are routed through a single point. This is
@@ -420,8 +424,8 @@ then, the output is sent.</p>
         </div>
 
         
+        <a href="./index.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./Application Flow Walk Through.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
