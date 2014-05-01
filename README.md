@@ -1,6 +1,8 @@
 Forge Framework
 ===============
 
+This is a test.
+
 Forge Framework is an application level framework that runs on Zend Framework 2. The purpose of Forge Framework is to
 provide prebuilt application components, fully functional out of the box, with flexible customization strategies that
 offer full control to the user but do not break the upgrade path.
