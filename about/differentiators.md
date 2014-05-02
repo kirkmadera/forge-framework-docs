@@ -7,14 +7,16 @@ consumer to choose the modules he wants, install them, then customize as needed.
 Forge Framework aims to differentiate itself from other platforms in a number of ways:
 
 * **Clear and complete documentation** - Since Zend Frramework 2 is used as a base and is
-  already well documented, Forge Framework has a strong foundation for documentation
+  already well documented, Forge Framework has a strong foundation for documentation. Forge
+  Framework builds on this with complete documentation for all functionality as well as all
+  breaks from default Zend Framework 2 functionality.
 * **Focused on interoperability** - All Forge Framework functionality is written with clear
-  interfaces and defined injection points for subsystems to be replaced with external systems
+  interfaces and defined injection points for subsystems to be replaced with external systems.
 * **Performance and Scalability** - Performance and Scalability are considered with every line
-  of code added to the codebase
+  of code added to the codebase.
 * **Mobile First and Content Driven Responsive Design** - Information Architecture and Visual
   Design for all Forge Framework functionality is built with many different device experiences
-  in mind
+  in mind.
 * **Hybrid of Responsive and Mobile** - Responsive design can't handle everything. There are
   instances where the mobile experience must be explicitly different or where certain content
   is superfluous to the page and does not need to be served. Forge Framework allows for

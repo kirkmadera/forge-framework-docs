@@ -4,7 +4,7 @@ Application Flow Walk Through
 Forge Framework application flow is exactly that of ZF2 with a few additions. Below is a quick walk through of the
 application flow.
 
-![Basic Request Flow](images/basic-request-flow.png)
+![Basic Request Flow](./images/basic-request-flow.png)
 
 Forge Framework implements the Front Controller pattern where all requests are routed through a single point. This is
 an example of an index.php file which handles all incoming requests.
