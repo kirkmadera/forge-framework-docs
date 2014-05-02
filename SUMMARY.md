@@ -14,7 +14,7 @@
     * [Composite View](learn/composite-view.md)
     * [Design Hierarchy](learn/design-hierarchy.md)
     * [View Configuration](learn/view-configuration.md)
-    * [Domain Modeling and Data Mapping](learn/domain-modeling-and-data-mapping.md)
+    * [Domain Modeling and Data Persistence](learn/domain-modeling-and-data-persistence.md)
     * [User Authentication and Access Control](learn/user-authentication-and-access-control.md)
     * [Error and Exception Handling](learn/error-and-exception-handling.md)
     * [CSS and JS Merging and Minification](learn/css-and-js-merging-and-minifcation.md)
