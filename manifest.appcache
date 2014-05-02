@@ -1,14 +1,12 @@
 CACHE MANIFEST
-# Revision 1399002213481
+# Revision 1399002336613
 
 CACHE:
-about.html
 index.html
 about/core-principles.html
 about/differentiators.html
 about/status.html
 learn/application-flow.html
-learn.html
 gitbook/app.js
 gitbook/fonts/anonymouspro/400.woff
 gitbook/fonts/anonymouspro/400i.woff
