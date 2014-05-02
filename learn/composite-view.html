@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="3.4" data-basepath=".." data-revision="1399011283527">
+    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="3.4" data-basepath=".." data-revision="1399011586643">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -385,6 +385,19 @@
                     <section class="normal" id="section-gitbook_13">
                     
                         <h1 id="composite-view">Composite View</h1>
+<p>This document describes Forge&#39;s composite view</p>
+<p>Forge introduces a composite view. This is a view built in parts by many individual
+&quot;mini controllers&quot; called blocks. This helps to make blocks reusable, makes controllers
+very thin, and makes local modifications to core and community code possible. It
+also helps keep a local project with modifications more upgrade friendly.</p>
+<p>The composite view plays well with modules not coded for it. The original template
+paths remain in place, so template rendering is not broken if the module does
+not know about areas and designs. Simple views returned by controllers as array,
+null, or ViewModel are processed as usual by the standard ZF2 listeners that
+create a view model, if needed, then attach a template to it. Then, this view is
+injected into the composite view model as a child of &quot;main_content_children&quot;, using
+the identifier &quot;simple_view_content&quot;. This is then rendered within the composite
+view.</p>
 
                     
                     </section>
