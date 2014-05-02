@@ -13,6 +13,8 @@
         <meta name="generator" content="www.gitbook.io">
 
         
+        <link rel="next" href="../learn\README.html" />
+        
         
         <link rel="prev" href="../about/differentiators.html" />
         
@@ -40,7 +42,7 @@
 
 
         
-    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="1.3" data-basepath=".." data-revision="1399002404437">
+    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="1.2" data-basepath=".." data-revision="1399005828454">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -114,33 +116,27 @@
             <a href="../"><i class="fa fa-check"></i> Introduction</a>
         </li>
         
-            <li  data-level="1" >
+            <li  data-level="1" data-path="about\README.html">
                 
-                <span><b>1.</b> About Forge Framework</span>
+                <a href="../about\README.html">
+                    <i class="fa fa-check"></i> <b>1.</b> About Forge Framework
+                </a>
                 
                 
                 <ul class="articles">
                     
-                        <li  data-level="1.1" data-path="about/core-principles.html">
-                            
-                            <a href="../about/core-principles.html">
-                                <i class="fa fa-check"></i> <b>1.1.</b> Core Framework Principles
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="1.2" data-path="about/differentiators.html">
+                        <li  data-level="1.1" data-path="about/differentiators.html">
                             
                             <a href="../about/differentiators.html">
-                                <i class="fa fa-check"></i> <b>1.2.</b> Differentiators from Other Frameworks
+                                <i class="fa fa-check"></i> <b>1.1.</b> Differentiators from Other Frameworks
                             </a>
                             
                         </li>
                     
-                        <li  data-level="1.3" data-path="about/status.html">
+                        <li  data-level="1.2" data-path="about/status.html">
                             
                             <a href="../about/status.html">
-                                <i class="fa fa-check"></i> <b>1.3.</b> Status
+                                <i class="fa fa-check"></i> <b>1.2.</b> Status
                             </a>
                             
                         </li>
@@ -149,9 +145,11 @@
                 
             </li>
         
-            <li  data-level="2" >
+            <li  data-level="2" data-path="learn\README.html">
                 
-                <span><b>2.</b> Learn</span>
+                <a href="../learn\README.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Learn
+                </a>
                 
                 
                 <ul class="articles">
@@ -184,19 +182,21 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 60%;min-width: 40%;"></div>
+        <div class="inner" style="width: 50%;min-width: 33.333333333333336%;"></div>
     </div>
     <div class="chapters">
     
         <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
     
-        <a href="../about/core-principles.html" title="Core Framework Principles" class="chapter done " data-progress="1.1" style="left: 20%;"></a>
+        <a href="../about\README.html" title="About Forge Framework" class="chapter done new-chapter" data-progress="1" style="left: 16.666666666666668%;"></a>
     
-        <a href="../about/differentiators.html" title="Differentiators from Other Frameworks" class="chapter done " data-progress="1.2" style="left: 40%;"></a>
+        <a href="../about/differentiators.html" title="Differentiators from Other Frameworks" class="chapter done " data-progress="1.1" style="left: 33.333333333333336%;"></a>
     
-        <a href="../about/status.html" title="Status" class="chapter done " data-progress="1.3" style="left: 60%;"></a>
+        <a href="../about/status.html" title="Status" class="chapter done " data-progress="1.2" style="left: 50%;"></a>
     
-        <a href="../learn/application-flow.html" title="Application Flow Walk Through" class="chapter  " data-progress="2.1" style="left: 80%;"></a>
+        <a href="../learn\README.html" title="Learn" class="chapter  new-chapter" data-progress="2" style="left: 66.66666666666667%;"></a>
+    
+        <a href="../learn/application-flow.html" title="Application Flow Walk Through" class="chapter  " data-progress="2.1" style="left: 83.33333333333333%;"></a>
     
         <a href="../learn\application-configuration.html" title="Application Configuration" class="chapter  " data-progress="2.2" style="left: 100%;"></a>
     
@@ -205,9 +205,67 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_4">
+                    <section class="normal" id="section-gitbook_3">
                     
                         <h1 id="status">Status</h1>
+<h2 id="completed">Completed</h2>
+<ul>
+<li>Composite view using layout configuration files and block classes, with a shared data
+layer</li>
+<li>Strategy for completely self-contained modules</li>
+<li>Module dependency checking</li>
+<li>Error handling, exception handling, and logging to various outputs</li>
+<li>Design strategy with a minimal functional abstract theme and a more styled default theme. * Base of abstract theme built on HTML 5 Boilerplate</li>
+<li>Javascript and CSS file merging and minification strategy, utilizing named groups</li>
+<li>Admin area login and basic functionality</li>
+<li>Access control strategy for enforcing rules based on roles, privileges, and resource
+accessed</li>
+<li>Flexible data modeling and persistence strategy using the data mapper and repository
+patterns</li>
+<li>User login, forgot password, profile, edit profile functionality</li>
+<li>OAuth login adapter interface. Currently only LinkedIn adapter built</li>
+<li>A developer tools area in the admin where view configuration can be tested and pages can
+be previewed.</li>
+<li>Invite Only functionality where site registration may be closed and invites sent to
+specific email addresses via the admin</li>
+</ul>
+<h2 id="in-progress">In Progress</h2>
+<ul>
+<li>Abstract theme adjustments</li>
+<li>Remove custom module dependency management in favor of ZF2&#39;s. This did not exist at the
+module dependency management was built for Forge Framework</li>
+<li>Document current functionality</li>
+<li>Notification functionality with the ability to display notifications to a specific user, a
+specific role, all frontend users, all admin users, or all users</li>
+<li>Inbox system for sending messages back and forth. Not planned to be robust as there is no
+specific business need for this at the moment.</li>
+</ul>
+<h2 id="planned">Planned</h2>
+<ul>
+<li>Refactor current view code</li>
+<li>Review any ZF2 functionality overrides and document them</li>
+<li>Cron job scheduler and view in the admin</li>
+<li>Process manager with corresponding admin view</li>
+<li>Queuing system for any process that can be deferred to improve user perceived system
+performance</li>
+<li>Full page caching system based on HTTP protocol similar to that of Symfony</li>
+<li>Ability to set module config settings via the admin</li>
+<li>Module self-installation and self-uninstallation of database structure &amp; data changes</li>
+<li>Facebook OAuth login</li>
+<li>Twitter OAuth login</li>
+<li>Google OAuth login</li>
+<li>More functionality under developer tools</li>
+</ul>
+<h2 id="major-future-milestones">Major Future Milestones</h2>
+<ul>
+<li>Content Management System</li>
+<li>Blog</li>
+<li>eCommerce Functionality (Will split this milestone up later once it becomes feasible)</li>
+<li>Social sharing</li>
+<li>Newsletter signup and integration to marketing platforms like MailChimp and CheetahMail</li>
+<li>Review stability and benefits of Hack Language and potentially implement</li>
+<li>Make fully compatible with HHVM and recommend as the default setup</li>
+</ul>
 
                     
                     </section>
@@ -219,6 +277,8 @@
         
         <a href="../about/differentiators.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
+        
+        <a href="../learn\README.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
