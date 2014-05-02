@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Differentiators from Other Frameworks | Forge Framework Documentation</title>
+        <title>About Forge Framework | Forge Framework Documentation</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,13 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../about/status.html" />
+        <link rel="next" href="../about/differentiators.html" />
         
         
-        <link rel="prev" href="../about/README.html" />
+        <link rel="prev" href="../index.html" />
         
 
-        <meta property="og:title" content="Differentiators from Other Frameworks | Forge Framework Documentation">
+        <meta property="og:title" content="About Forge Framework | Forge Framework Documentation">
         <meta property="og:site_name" content="Forge Framework Documentation">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="1.1" data-basepath=".." data-revision="1399008238301">
+    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="1" data-basepath=".." data-revision="1399008238301">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -108,7 +108,7 @@
             <a href="https://github.com/kirkmadera/forge-framework-docs/issues" target="blank">Questions and Issues</a>
         </li>
         <li>
-            <a href="https://github.com/kirkmadera/forge-framework-docs/edit/master/about/differentiators.md" target="blank">Edit and Contribute</a>
+            <a href="https://github.com/kirkmadera/forge-framework-docs/edit/master/about/README.md" target="blank">Edit and Contribute</a>
         </li>
         <li class="divider"></li>
         
@@ -182,7 +182,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 33.333333333333336%;min-width: 16.666666666666668%;"></div>
+        <div class="inner" style="width: 16.666666666666668%;min-width: 0%;"></div>
     </div>
     <div class="chapters">
     
@@ -190,7 +190,7 @@
     
         <a href="../about/README.html" title="About Forge Framework" class="chapter done new-chapter" data-progress="1" style="left: 16.666666666666668%;"></a>
     
-        <a href="../about/differentiators.html" title="Differentiators from Other Frameworks" class="chapter done " data-progress="1.1" style="left: 33.333333333333336%;"></a>
+        <a href="../about/differentiators.html" title="Differentiators from Other Frameworks" class="chapter  " data-progress="1.1" style="left: 33.333333333333336%;"></a>
     
         <a href="../about/status.html" title="Status" class="chapter  " data-progress="1.2" style="left: 50%;"></a>
     
@@ -205,40 +205,65 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_3">
+                    <section class="normal" id="section-gitbook_2">
                     
-                        <h1 id="differentiators-from-other-frameworks">Differentiators from Other Frameworks</h1>
-<p>Forge Framework&#39;s theory of operation is very similar to that of Magento; build a fully
-functional platform that is customizable and upgradable. The intended workflow is for a
-consumer to choose the modules he wants, install them, then customize as needed.</p>
-<p>Forge Framework aims to differentiate itself from other platforms in a number of ways:</p>
+                        <h1 id="about-forge-framework">About Forge Framework</h1>
+<p>The goal of Forge Framework is to allow for development of reusable complex application
+subsystems like Product Catalog Managment, Content Management, or Inventory Management
+which work together when paired, but also work standalone. Any subsystem should provide
+a clear interface and be easily replaceable with another implementation. The architecture
+of Forge Framework allows for full customization of any piece of functionality or design,
+while retaining the ability to upgrade the core framework without refactoring.</p>
+<h2 id="guiding-principles">Guiding Principles</h2>
 <ul>
-<li><strong>Clear and complete documentation</strong> - Since Zend Frramework 2 is used as a base and is
-already well documented, Forge Framework has a strong foundation for documentation</li>
-<li><strong>Focused on interoperability</strong> - All Forge Framework functionality is written with clear
-interfaces and defined injection points for subsystems to be replaced with external systems</li>
-<li><strong>Performance and Scalability</strong> - Performance and Scalability are considered with every line
-of code added to the codebase</li>
-<li><strong>Mobile First and Content Driven Responsive Design</strong> - Information Architecture and Visual
-Design for all Forge Framework functionality is built with many different device experiences
-in mind</li>
-<li><strong>Hybrid of Responsive and Mobile</strong> - Responsive design can&#39;t handle everything. There are
-instances where the mobile experience must be explicitly different or where certain content
-is superfluous to the page and does not need to be served. Forge Framework allows for
-specific device experiences to be targeted from a server point of view; not just on the
-frontend.</li>
-<li><strong>Ease of Upgrades</strong> - The architecture of the platform is such that upgrades are easy, even
-with customizations</li>
-<li><strong>Well Defined Coding Standards</strong> - Forge Framework follows ZF2 coding
-standards which are PSR standards based. A standard exists for a reason and we see no reason
-to be different here.</li>
-<li><strong>Documented Best Practices</strong> - Best practices on module creation, functionality
-customization and other tasks will be explicitly documented. There will generally always be
-a recommended approach for any particular task.</li>
-<li><strong>Strong Error Handling and Debugging Tools</strong> - Forge Framework&#39;s error handling can be
-turned up to 11. Zend_Log is leveraged to allow for logging based on priority to many
-different outputs. We plan to support automatic bug creation even in popular bug tracking
-platforms like Jira or Bugzilla.</li>
+<li>Must allow for completely self-contained modules</li>
+<li>Must allow modules to affect any part of the view using a composite view design pattern</li>
+<li>Should keep module dependencies to a minimum</li>
+<li>Must explicitly define module dependencies</li>
+<li>Should leverage Zend Framework when possible</li>
+<li>Must use Zend Framework coding standards</li>
+<li>Must handle errors and exceptions well from both a developer perspective and an end-user
+perspective</li>
+<li>Must allow for unintrusive extension of existing functionality using design patterns
+like event/observer and service locator/dependency injection</li>
+<li>Must allow for layers of core, third party, then local functionality</li>
+<li>Must allow for multiple cascading themes</li>
+<li>Must make security a high priority</li>
+<li>Must make performance a high priority</li>
+<li>Must be capable of importing/exporting data for use in or from other systems</li>
+<li>Must define clear integration points and interfaces which allow for complete
+substitution of parts of the system</li>
+<li>Must be well documented</li>
+<li>Must provide unit tests for all core functionality</li>
+<li>Should quarantine files that should not be versioned into discrete directories</li>
+<li>Must be open-source</li>
+<li>Should apply &quot;Mobile First&quot; methodology when creating all application information
+architecture and visual design</li>
+<li>Must use responsive abstract and default theme</li>
+<li>Should use Composer to manage module dependencies and recommendations</li>
+</ul>
+<h2 id="software-requirements-recommendations">Software Requirements &amp; Recommendations</h2>
+<p>Forge Framework is still in very early development stages, so we are using somewhat bleeding
+edge technologies with the expectation that they will be stable and widley available at the
+time that Forge Framework is released.</p>
+<h3 id="current-requirements">Current Requirements</h3>
+<ul>
+<li>PHP &gt;=5.5.3 - Forge uses password_hash() from 5.5. Not sure if any 5.6 features/functions
+will be needed.</li>
+<li>ZF2 &gt;= 2.3</li>
+<li>MySQL 5.5</li>
+<li>PHP intl extension - This is currently required because it made coding some of the
+translation stuff easier. This will be removed as a requirement on release and made a
+recommendation instead.</li>
+<li>PHP json extension - Currently required to perform json tasks. May use ZF2&#39;s Json classes
+in the future to avoid forcing a user to install a PHP extension</li>
+</ul>
+<h3 id="planned-requirements-depending-on-stability-and-availability-at-release-time-">Planned Requirements (Depending on stability and availability at release time)</h3>
+<ul>
+<li>PHP 5.6 recommended - Will probably support 5.5</li>
+<li>MySQL 5.6 recommended - InnoDb Fulltext search is expected to be used.</li>
+<li>PHP intl extension recommended</li>
+<li>PHP json extension recommended</li>
 </ul>
 
                     
@@ -249,10 +274,10 @@ platforms like Jira or Bugzilla.</li>
         </div>
 
         
-        <a href="../about/README.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        <a href="../index.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../about/status.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        <a href="../about/differentiators.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
