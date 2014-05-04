@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Software Requirements | Forge Framework Documentation</title>
+        <title>Domain Modeling and Data Persistence | Forge Framework Documentation</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,13 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../installation/server-configuration.html" />
+        <link rel="next" href="../domain-modeling-and-data-persistence/querying-data.html" />
         
         
-        <link rel="prev" href="../installation/hardware-requirements.html" />
+        <link rel="prev" href="../composite-view/README.html" />
         
 
-        <meta property="og:title" content="Software Requirements | Forge Framework Documentation">
+        <meta property="og:title" content="Domain Modeling and Data Persistence | Forge Framework Documentation">
         <meta property="og:site_name" content="Forge Framework Documentation">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="2.2" data-basepath=".." data-revision="1399174603423">
+    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="5" data-basepath=".." data-revision="1399174603423">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -108,7 +108,7 @@
             <a href="https://github.com/kirkmadera/forge-framework-docs/issues" target="blank">Questions and Issues</a>
         </li>
         <li>
-            <a href="https://github.com/kirkmadera/forge-framework-docs/edit/master/installation/software-requirements.md" target="blank">Edit and Contribute</a>
+            <a href="https://github.com/kirkmadera/forge-framework-docs/edit/master/domain-modeling-and-data-persistence/README.md" target="blank">Edit and Contribute</a>
         </li>
         <li class="divider"></li>
         
@@ -355,7 +355,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 48%;min-width: 44%;"></div>
+        <div class="inner" style="width: 76%;min-width: 72%;"></div>
     </div>
     <div class="chapters">
     
@@ -385,19 +385,19 @@
     
         <a href="../installation/software-requirements.html" title="Software Requirements" class="chapter done " data-progress="2.2" style="left: 48%;"></a>
     
-        <a href="../installation/server-configuration.html" title="Server Configuration" class="chapter  " data-progress="2.3" style="left: 52%;"></a>
+        <a href="../installation/server-configuration.html" title="Server Configuration" class="chapter done " data-progress="2.3" style="left: 52%;"></a>
     
-        <a href="../quick-start/README.html" title="Quick Start" class="chapter  new-chapter" data-progress="3" style="left: 56%;"></a>
+        <a href="../quick-start/README.html" title="Quick Start" class="chapter done new-chapter" data-progress="3" style="left: 56%;"></a>
     
-        <a href="../quick-start/application-flow.html" title="Application Flow Walk Through" class="chapter  " data-progress="3.1" style="left: 60%;"></a>
+        <a href="../quick-start/application-flow.html" title="Application Flow Walk Through" class="chapter done " data-progress="3.1" style="left: 60%;"></a>
     
-        <a href="../quick-start/application-configuration.html" title="Application Configuration" class="chapter  " data-progress="3.2" style="left: 64%;"></a>
+        <a href="../quick-start/application-configuration.html" title="Application Configuration" class="chapter done " data-progress="3.2" style="left: 64%;"></a>
     
-        <a href="../quick-start/module-example.html" title="A Basic Module Example" class="chapter  " data-progress="3.3" style="left: 68%;"></a>
+        <a href="../quick-start/module-example.html" title="A Basic Module Example" class="chapter done " data-progress="3.3" style="left: 68%;"></a>
     
-        <a href="../composite-view/README.html" title="Composite View" class="chapter  new-chapter" data-progress="4" style="left: 72%;"></a>
+        <a href="../composite-view/README.html" title="Composite View" class="chapter done new-chapter" data-progress="4" style="left: 72%;"></a>
     
-        <a href="../domain-modeling-and-data-persistence/README.html" title="Domain Modeling and Data Persistence" class="chapter  new-chapter" data-progress="5" style="left: 76%;"></a>
+        <a href="../domain-modeling-and-data-persistence/README.html" title="Domain Modeling and Data Persistence" class="chapter done new-chapter" data-progress="5" style="left: 76%;"></a>
     
         <a href="../domain-modeling-and-data-persistence/querying-data.html" title="Querying Data" class="chapter  " data-progress="5.1" style="left: 80%;"></a>
     
@@ -416,31 +416,56 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_14">
+                    <section class="normal" id="section-gitbook_1">
                     
-                        <h1 id="software-requirements">Software Requirements</h1>
-<p>Forge Framework is still in very early development stages, so we are using somewhat
-bleeding edge technologies with the expectation that they will be stable and widely
-available at the time that Forge Framework is released.</p>
-<h2 id="current-requirements">Current Requirements</h2>
-<ul>
-<li><strong>PHP &gt;=5.5.3</strong> - Forge uses password_hash() from 5.5. Not sure if any 5.6
-features/functions will be needed.</li>
-<li><strong>ZF2 &gt;=2.3</strong></li>
-<li><strong>MySQL &gt;=5.5</strong></li>
-<li><strong>PHP intl extension</strong> - This is currently required because it made coding some of the
-translation stuff easier. This will be removed as a requirement on release and made a
-recommendation instead.</li>
-<li><strong>PHP json extension</strong> - Currently required to perform json tasks. May use ZF2&#39;s Json
-classes in the future to avoid forcing a user to install a PHP extension</li>
-</ul>
-<h2 id="planned-requirements-depending-on-stability-and-availability-at-release-time-">Planned Requirements (Depending on stability and availability at release time)</h2>
-<ul>
-<li><strong>PHP 5.6 recommended</strong> - Will probably support 5.5</li>
-<li><strong>MySQL 5.6 required</strong> - InnoDb Fulltext search is expected to be used</li>
-<li><strong>PHP intl extension recommended</strong></li>
-<li><strong>PHP json extension recommended</strong></li>
-</ul>
+                        <h1 id="domain-modeling-and-data-persistence">Domain Modeling and Data Persistence</h1>
+<p>Domain models in Forge Framework are true domain models focused on business data, business
+logic, and nothing more. Data modeling is complicated enough without the included complexity
+of data persistence. Forge Framework implements the
+<a href="http://martinfowler.com/eaaCatalog/dataMapper.html" target="_blank">Data Mapper</a> pattern; the task of data
+persistence is offloaded to a class dedicated to this purpose.</p>
+<p>To abstract the data storage even further, the
+<a href="http://martinfowler.com/eaaCatalog/repository.html" target="_blank">Repository Pattern</a> is also utilized via
+the <em>Criteria</em> class. This class allows all data to be queried in direct terms of domain data
+and relationships with no knowledge of the underlying data storage structure.</p>
+<p>Both of these patterns make it easier to substitute data storage mechanisms. Forge Framework
+intends to the best storage mechanism for each specific task.</p>
+<p>Other existing ORM systems like <a href="http://www.doctrine-project.org/projects/orm.html" target="_blank">Doctrine</a>
+were also considered but, in the end, were not a good fit.</p>
+<h2 id="terms">Terms</h2>
+<p>The following PHP class types are used in Forge Framework:</p>
+<ol>
+<li><strong>Entity</strong> - An entity is a domain model with business data and logic. <em>(Note: We may want
+to rename this at some point as domain models may not represent anything tangeable. For
+example, you might write a Tax model to store tax calculation logic, but there is no real
+tax &quot;entity&quot;)</em></li>
+<li><strong>Mapper</strong> - A mapper class retreives or stores entities from persistent storage.</li>
+<li><strong>Criteria</strong> - The Criteria class is a communication layer between entities and mappers
+that allow data to be queried in terms of entities.</li>
+</ol>
+<h2 id="entity">Entity</h2>
+<p>An entity is a domain object with business properties and logic. It has no awareness of the persistence layer or mapper
+classes. This means that lazy loading of data is not possible, which can make for a slightly awkward workflow for those
+used to active record. For example, $user-&gt;getBillingAddress() won&#39;t work unless you&#39;ve already loaded the
+billing address record from the database into the user entity. This does mean, however, that your domain objects have
+a clear objective and only do what they do best.</p>
+<p>All entities clearly define the properties they work with. The getProvidedData() method on all entities returns an array
+of all data keys relevant directly to this entity, not including related entities&#39; data. The
+getProvidedData() method is also used help facilitate the getArrayCopy() and populate() methods to implement the
+ArraySerializeable interface. This allows entities to be used directly with forms using ZF2&#39;s bind() functionality. The
+populate method is also used by the database mapper to create the entity populated with all data returned from the
+persistence layer. Entities also can store additional data in an arbitrary data array. The populate() method uses the
+ClassMethods hydrator to populate all recognized data points from getProvidedData(), then adds to the generic data array
+for unrecognized properties.</p>
+<p>All entities also provide a general input filter which can be used for validation. This is done by implementing the
+InputFilterAwareInterface interface.</p>
+<p>Internally, entities store an $isNew flag, to help mappers determine whether the entity is new or exists already in
+storage.</p>
+<h2 id="mapper">Mapper</h2>
+<p>All mapper classes implement these methods per the MapperInterface: find(), createEntity(), updateEntity(), deleteEntity(), batchSave(),
+batchCreate(), batchUpdate(), update(), and delete(). These are not specific to the database mapper implementation. The
+data source for these mappers could be anything. The primary job of the mapper is to interpret the criteria passed to it
+in domain logic terms and interact with the persistence layer accordingly.</p>
 
                     
                     </section>
@@ -450,10 +475,10 @@ classes in the future to avoid forcing a user to install a PHP extension</li>
         </div>
 
         
-        <a href="../installation/hardware-requirements.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        <a href="../composite-view/README.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../installation/server-configuration.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        <a href="../domain-modeling-and-data-persistence/querying-data.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

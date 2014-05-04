@@ -1,0 +1,763 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Querying Data | Forge Framework Documentation</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="kirkmadera">
+        <meta name="description" content="Forge Framework Documentation">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../domain-modeling-and-data-persistence/saving-data.html" />
+        
+        
+        <link rel="prev" href="../domain-modeling-and-data-persistence/README.html" />
+        
+
+        <meta property="og:title" content="Querying Data | Forge Framework Documentation">
+        <meta property="og:site_name" content="Forge Framework Documentation">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/kirkmadera">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="5.1" data-basepath=".." data-revision="1399174603423">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/kirkmadera/forge-framework-docs" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    
+    <a href="https://github.com/kirkmadera/forge-framework-docs/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/kirkmadera/forge-framework-docs/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >Forge Framework Documentation</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/kirkmadera" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/kirkmadera/forge-framework-docs/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/kirkmadera/forge-framework-docs/edit/master/domain-modeling-and-data-persistence/querying-data.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="about/README.html">
+                
+                <a href="../about/README.html">
+                    <i class="fa fa-check"></i> <b>1.</b> About Forge Framework
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="about/differentiators.html">
+                            
+                            <a href="../about/differentiators.html">
+                                <i class="fa fa-check"></i> <b>1.1.</b> Differentiators from Other Frameworks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="about/status.html">
+                            
+                            <a href="../about/status.html">
+                                <i class="fa fa-check"></i> <b>1.2.</b> Status
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="installation/README.html">
+                
+                <a href="../installation/README.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Installation
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="installation/hardware-requirements.html">
+                            
+                            <a href="../installation/hardware-requirements.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> Hardware Requirements
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="installation/software-requirements.html">
+                            
+                            <a href="../installation/software-requirements.html">
+                                <i class="fa fa-check"></i> <b>2.2.</b> Software Requirements
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="installation/server-configuration.html">
+                            
+                            <a href="../installation/server-configuration.html">
+                                <i class="fa fa-check"></i> <b>2.3.</b> Server Configuration
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="quick-start/README.html">
+                
+                <a href="../quick-start/README.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Quick Start
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="quick-start/application-flow.html">
+                            
+                            <a href="../quick-start/application-flow.html">
+                                <i class="fa fa-check"></i> <b>3.1.</b> Application Flow Walk Through
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="quick-start/application-configuration.html">
+                            
+                            <a href="../quick-start/application-configuration.html">
+                                <i class="fa fa-check"></i> <b>3.2.</b> Application Configuration
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="quick-start/module-example.html">
+                            
+                            <a href="../quick-start/module-example.html">
+                                <i class="fa fa-check"></i> <b>3.3.</b> A Basic Module Example
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="composite-view/README.html">
+                
+                <a href="../composite-view/README.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Composite View
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="domain-modeling-and-data-persistence/README.html">
+                
+                <a href="../domain-modeling-and-data-persistence/README.html">
+                    <i class="fa fa-check"></i> <b>5.</b> Domain Modeling and Data Persistence
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="domain-modeling-and-data-persistence/querying-data.html">
+                            
+                            <a href="../domain-modeling-and-data-persistence/querying-data.html">
+                                <i class="fa fa-check"></i> <b>5.1.</b> Querying Data
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="domain-modeling-and-data-persistence/saving-data.html">
+                            
+                            <a href="../domain-modeling-and-data-persistence/saving-data.html">
+                                <i class="fa fa-check"></i> <b>5.2.</b> Saving Data
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="design-hierarchy/README.html">
+                
+                <a href="../design-hierarchy/README.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Design Hierarchy
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="7" data-path="view-configuration/README.html">
+                
+                <a href="../view-configuration/README.html">
+                    <i class="fa fa-check"></i> <b>7.</b> View Configuration
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="8" data-path="user-authentication-and-access-control/README.html">
+                
+                <a href="../user-authentication-and-access-control/README.html">
+                    <i class="fa fa-check"></i> <b>8.</b> User Authentication and Access Control
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="9" data-path="error-and-exception-handling/README.html">
+                
+                <a href="../error-and-exception-handling/README.html">
+                    <i class="fa fa-check"></i> <b>9.</b> Error and Exception Handling
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="10" data-path="css-and-js-merging-and-minifcation/README.html">
+                
+                <a href="../css-and-js-merging-and-minifcation/README.html">
+                    <i class="fa fa-check"></i> <b>10.</b> CSS and JS Merging and Minification
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="11" data-path="task-manager/README.html">
+                
+                <a href="../task-manager/README.html">
+                    <i class="fa fa-check"></i> <b>11.</b> Task Manager
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="12" data-path="shell-scripts/README.html">
+                
+                <a href="../shell-scripts/README.html">
+                    <i class="fa fa-check"></i> <b>12.</b> Running Shell Scripts
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="13" data-path="caching-strategies/README.html">
+                
+                <a href="../caching-strategies/README.html">
+                    <i class="fa fa-check"></i> <b>13.</b> Caching Strategies
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="14" data-path="zf2-breaks/README.html">
+                
+                <a href="../zf2-breaks/README.html">
+                    <i class="fa fa-check"></i> <b>14.</b> Breaks from Zend Framework 2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="15" data-path="resources/README.html">
+                
+                <a href="../resources/README.html">
+                    <i class="fa fa-check"></i> <b>15.</b> Resources
+                </a>
+                
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 80%;min-width: 76%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../about/README.html" title="About Forge Framework" class="chapter done new-chapter" data-progress="1" style="left: 4%;"></a>
+    
+        <a href="../about/differentiators.html" title="Differentiators from Other Frameworks" class="chapter done " data-progress="1.1" style="left: 8%;"></a>
+    
+        <a href="../about/status.html" title="Status" class="chapter done " data-progress="1.2" style="left: 12%;"></a>
+    
+        <a href="../css-and-js-merging-and-minifcation/README.html" title="CSS and JS Merging and Minification" class="chapter done " data-progress="10" style="left: 16%;"></a>
+    
+        <a href="../task-manager/README.html" title="Task Manager" class="chapter done " data-progress="11" style="left: 20%;"></a>
+    
+        <a href="../shell-scripts/README.html" title="Running Shell Scripts" class="chapter done " data-progress="12" style="left: 24%;"></a>
+    
+        <a href="../caching-strategies/README.html" title="Caching Strategies" class="chapter done " data-progress="13" style="left: 28%;"></a>
+    
+        <a href="../zf2-breaks/README.html" title="Breaks from Zend Framework 2" class="chapter done " data-progress="14" style="left: 32%;"></a>
+    
+        <a href="../resources/README.html" title="Resources" class="chapter done " data-progress="15" style="left: 36%;"></a>
+    
+        <a href="../installation/README.html" title="Installation" class="chapter done new-chapter" data-progress="2" style="left: 40%;"></a>
+    
+        <a href="../installation/hardware-requirements.html" title="Hardware Requirements" class="chapter done " data-progress="2.1" style="left: 44%;"></a>
+    
+        <a href="../installation/software-requirements.html" title="Software Requirements" class="chapter done " data-progress="2.2" style="left: 48%;"></a>
+    
+        <a href="../installation/server-configuration.html" title="Server Configuration" class="chapter done " data-progress="2.3" style="left: 52%;"></a>
+    
+        <a href="../quick-start/README.html" title="Quick Start" class="chapter done new-chapter" data-progress="3" style="left: 56%;"></a>
+    
+        <a href="../quick-start/application-flow.html" title="Application Flow Walk Through" class="chapter done " data-progress="3.1" style="left: 60%;"></a>
+    
+        <a href="../quick-start/application-configuration.html" title="Application Configuration" class="chapter done " data-progress="3.2" style="left: 64%;"></a>
+    
+        <a href="../quick-start/module-example.html" title="A Basic Module Example" class="chapter done " data-progress="3.3" style="left: 68%;"></a>
+    
+        <a href="../composite-view/README.html" title="Composite View" class="chapter done new-chapter" data-progress="4" style="left: 72%;"></a>
+    
+        <a href="../domain-modeling-and-data-persistence/README.html" title="Domain Modeling and Data Persistence" class="chapter done new-chapter" data-progress="5" style="left: 76%;"></a>
+    
+        <a href="../domain-modeling-and-data-persistence/querying-data.html" title="Querying Data" class="chapter done " data-progress="5.1" style="left: 80%;"></a>
+    
+        <a href="../domain-modeling-and-data-persistence/saving-data.html" title="Saving Data" class="chapter  " data-progress="5.2" style="left: 84%;"></a>
+    
+        <a href="../design-hierarchy/README.html" title="Design Hierarchy" class="chapter  new-chapter" data-progress="6" style="left: 88%;"></a>
+    
+        <a href="../view-configuration/README.html" title="View Configuration" class="chapter  new-chapter" data-progress="7" style="left: 92%;"></a>
+    
+        <a href="../user-authentication-and-access-control/README.html" title="User Authentication and Access Control" class="chapter  new-chapter" data-progress="8" style="left: 96%;"></a>
+    
+        <a href="../error-and-exception-handling/README.html" title="Error and Exception Handling" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_2">
+                    
+                        <h1 id="querying-data">Querying Data</h1>
+<p>The <em>Criteria</em> class is used for querying data in terms of entities. No knowledge is required
+of the underlying persistence mechanism or data structure; only entity data and relationships.
+<em>Criteria</em> can be used for common simple use cases with very minimal code or can be used for
+complex queries.</p>
+<p>The <em>Criteria</em> class cannot handle every possible scenario. In instances where use of the
+Criteria class becomes too cumbersome, create a specific method on the Mapper class instead.
+<strong>Never directly access or write to the persistence layer from any class other than a Mapper.</strong>
+This will break down the barriers between the domain and persistence layers and cause issues in
+the future.</p>
+<h2 id="creating-a-criteria-object">Creating a Criteria Object</h2>
+<p>The <em>Criteria</em> constructor is flexible and will respond to the following arguments as the first argument:</p>
+<ul>
+<li><strong>Scalar Value</strong> - The given value is treated as an &quot;id&quot; value</li>
+<li><strong>Numerically Indexed Array</strong> - The given values are treated as &quot;id&quot; values. Data returned
+must match one of the provided values in its id field</li>
+<li><strong>Key/Value Array</strong> - Data returned must match all provided key/value pairs</li>
+<li><strong>Array with Reserved Keys</strong> - Reserved keys &quot;_data_keys&quot;, &quot;_filters&quot;, &quot;_sort&quot;, and &quot;_limit&quot;
+may also be used. These were really created for internal purposes of copying criteria data.
+It is recommented to use the explicit <strong>Criteria</strong> methods when the query is more complicated
+than the first three signatures account for.</li>
+</ul>
+<h3 id="learning-through-examples-">Learning Through Examples:</h3>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">// Retrieve user data link to a user with the id 123 and return as a User entity</span>
+<span class="hljs-variable">$criteria</span> = <span class="hljs-keyword">new</span> Criteria();
+<span class="hljs-variable">$criteria</span>-&gt;addFilter(<span class="hljs-string">'id'</span>, <span class="hljs-string">'=='</span>, <span class="hljs-number">123</span>);
+<span class="hljs-variable">$userMapper</span> = <span class="hljs-variable">$this</span>-&gt;getServiceLocator(<span class="hljs-string">'ForgeUser\Mapper\User'</span>);
+<span class="hljs-variable">$user</span> = <span class="hljs-variable">$userMapper</span>-&gt;find(<span class="hljs-variable">$criteria</span>);
+</code></pre>
+<p>The &quot;id&quot; here is not a reference to an &quot;id&quot; field in a database. It is a reference to an &quot;id&quot;
+field on the entity. The ID is tied to the user, not to the database. The <em>Mapper</em> reads the
+<em>Criteria</em> object and translates &quot;id&quot; to whatever it knows as the &quot;id&quot; field. This could be
+&quot;user_id&quot; for example. This could be something other than a MySQL database also. It is the
+<em>Mapper&#39;s</em> job to read and translate the request from the <em>Criteria</em> object.</p>
+<p>The <em>Criteria</em> object is merely a set of instructions for a <em>Mapper</em> to execute.</p>
+<p><em>Criteria</em> also has shorthand notations. Typing out that much just to grab a user by ID is
+extremely verbose.</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-variable">$criteria</span> = <span class="hljs-keyword">new</span> Criteria([<span class="hljs-string">'id'</span> =&gt; <span class="hljs-number">123</span>]);
+<span class="hljs-variable">$userMapper</span> = <span class="hljs-variable">$this</span>-&gt;getServiceLocator(<span class="hljs-string">'ForgeUser\Mapper\User'</span>);
+<span class="hljs-variable">$user</span> = <span class="hljs-variable">$userMapper</span>-&gt;find(<span class="hljs-variable">$criteria</span>);
+</code></pre>
+<p>Which can be reduced to:</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-variable">$criteria</span> = <span class="hljs-keyword">new</span> Criteria(<span class="hljs-number">123</span>);
+<span class="hljs-variable">$user</span> = <span class="hljs-variable">$userMapper</span>-&gt;find(<span class="hljs-variable">$criteria</span>);
+</code></pre>
+<p>...which can further be reduced to...</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-variable">$userMapper</span> = <span class="hljs-variable">$this</span>-&gt;getServiceLocator(<span class="hljs-string">'ForgeUser\Mapper\User'</span>);
+<span class="hljs-variable">$user</span> = <span class="hljs-variable">$userMapper</span>-&gt;find(<span class="hljs-number">123</span>);
+</code></pre>
+<p>The find() method of a <em>Mapper</em> expects a <em>Criteria</em> object. If a <em>Criteria</em> object is not
+passed, a <em>Criteria</em> object is created and the first argument is passed to <em>Criteria&#39;s</em>
+constructor().</p>
+<h2 id="mapper-return-types">Mapper Return Types</h2>
+<p><em>Mappers</em> have the ability to return data in many ways. The default is to return an entity object like a $user entity. The following options are available:</p>
+<ul>
+<li><strong>MapperInterface::RETURN_AS_VALUE</strong> - Returns a single value from one row, one column</li>
+<li><strong>MapperInterface::RETURN_AS_COLUMN</strong> - Returns an array of values from a single column</li>
+<li><strong>MapperInterface::RETURN_AS_ARRAY</strong> - Returns an array of the first row</li>
+<li><strong>MapperInterface::RETURN_AS_ENTITY</strong> - Returns an Entity object created from the first row</li>
+<li><strong>MapperInterface::RETURN_AS_MULTIDIMENSIONAL_ARRAY</strong> - Returns an array of all rows, all
+columns</li>
+<li><strong>MapperInterface::RETURN_AS_RESULT_SET</strong> - Returns an instance of
+Zend\Db\ResultSet\ResultSetInterface. Think of this as an array of entity objects.</li>
+<li><strong>MapperInterface::RETURN_AS_PAGINATOR</strong> - Returns an instance of Zend\Paginator\Paginator.
+This is a ResultSet wrapped in a paginator. It can be passed directly to a pagination
+control. It also behaves identitcally to a ResultSet in most other respects.</li>
+</ul>
+<p>The default return type is an entity object. The return types are smart and only load what is needed to return the requested data.</p>
+<p>The result set return type is interesting in that it does not create entity objects until they
+are needed, greatly reducing its memory footprint. When a ResultSet is iterated over, an entity
+is created by reading from an internal data array. This entity is also cloned from an entity
+prototype which greatly reduces the overhead of constructing a new entity each time.</p>
+<h3 id="learning-through-examples-">Learning Through Examples:</h3>
+<p>These are the most common use cases. Finding a single entity or finding multiple entities.</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">// Find user with ID 123. $user is a user entity object</span>
+<span class="hljs-variable">$user</span> = <span class="hljs-variable">$userMapper</span>-&gt;find(<span class="hljs-number">123</span>);
+
+<span class="hljs-comment">// Find all enabled users and return them as a result set</span>
+<span class="hljs-variable">$enabledUsers</span> = <span class="hljs-variable">$userMapper</span>-&gt;find([<span class="hljs-string">'enabled'</span> =&gt; <span class="hljs-keyword">true</span>], MapperInterface::RETURN_AS_RESULT_SET);
+
+<span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$enabledUsers</span> <span class="hljs-keyword">as</span> <span class="hljs-variable">$user</span>) {
+    <span class="hljs-comment">// $user is instance of a user entity class</span>
+    <span class="hljs-keyword">echo</span> <span class="hljs-variable">$user</span>-&gt;getFirstName() . <span class="hljs-string">"\n"</span>;
+}
+</code></pre>
+<p>Sometimes, the entity class is unnecessary overhead.</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">// Find all enabled users and return them as a multidimensional array</span>
+<span class="hljs-variable">$enabledUsers</span> = <span class="hljs-variable">$userMapper</span>-&gt;find([<span class="hljs-string">'enabled'</span> =&gt; <span class="hljs-keyword">true</span>],
+MapperInterface::RETURN_AS_MULTI_DIMENSIONAL_ARRAY);
+
+<span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$enabledUsers</span> <span class="hljs-keyword">as</span> <span class="hljs-variable">$user</span>) {
+    <span class="hljs-comment">// $user is an array</span>
+    <span class="hljs-keyword">echo</span> <span class="hljs-variable">$user</span>[<span class="hljs-string">'first_name'</span>] . <span class="hljs-string">"\n"</span>;
+}
+</code></pre>
+<p>Another common use case is returning ids only for a data set.</p>
+<p>@todo Create a better example for column return type</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">// Find all enabled users and return their IDs as an array</span>
+<span class="hljs-variable">$criteria</span> = <span class="hljs-keyword">new</span> Criteria();
+<span class="hljs-variable">$criteria</span>-&gt;setDataKeys([<span class="hljs-string">'id'</span>])
+         -&gt;addFilter(<span class="hljs-string">'enabled'</span>, <span class="hljs-string">'=='</span>, <span class="hljs-keyword">true</span>);
+<span class="hljs-variable">$enabledUserIds</span> = <span class="hljs-variable">$userMapper</span>-&gt;find(<span class="hljs-variable">$criteria</span>, MapperInterface::RETURN_AS_COLUMN);
+
+<span class="hljs-keyword">if</span> (in_array(<span class="hljs-variable">$user</span>-&gt;getId(), <span class="hljs-variable">$enabledUserIds</span>)) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">'This user is enabled!'</span>;
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">'This user is not enabled!'</span>;
+}
+</code></pre>
+<h2 id="related-entities">Related entities</h2>
+<p>Entities can be related to each other. This is done with mapping metadata in configuration files. The result is that related data can be retrieved using a dot notation to separate entity
+from property.</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">/**
+ * Find all enabled users with their role name, sorted by last name, then first name. Role is a
+ * related entity to user.
+ */</span>
+<span class="hljs-variable">$criteria</span> = <span class="hljs-keyword">new</span> Criteria();
+<span class="hljs-variable">$criteria</span>-&gt;addDataKey(<span class="hljs-string">'role.name'</span>)
+         -&gt;addFilter(<span class="hljs-string">'enabled'</span>, <span class="hljs-string">'=='</span>, <span class="hljs-keyword">true</span>)
+         -&gt;addSort(<span class="hljs-string">'last_name'</span>, SORT_ASC)
+         -&gt;addSort(<span class="hljs-string">'first_name'</span>, SORT_ASC);
+<span class="hljs-variable">$users</span> = <span class="hljs-variable">$userMapper</span>-&gt;find(<span class="hljs-variable">$criteria</span>, MapperInterface::RETURN_AS_RESULT_SET);
+
+<span class="hljs-comment">/**
+ * Find a user and his related default billing address record. This is a one to one
+ * relationship
+ */</span>
+<span class="hljs-variable">$criteria</span> = <span class="hljs-keyword">new</span> Criteria();
+<span class="hljs-variable">$criteria</span>-&gt;addDataKey(<span class="hljs-string">'default_billing_address.*'</span>)
+         -&gt;addFilter(<span class="hljs-string">'id'</span>, <span class="hljs-string">'=='</span>, <span class="hljs-number">123</span>);
+<span class="hljs-variable">$user</span> = <span class="hljs-variable">$userMapper</span>-&gt;find(<span class="hljs-variable">$criteria</span>);
+
+<span class="hljs-keyword">echo</span> <span class="hljs-variable">$user</span>-&gt;getFirstName();
+<span class="hljs-keyword">echo</span> <span class="hljs-variable">$user</span>-&gt;getDefaultBillingAddress-&gt;getStreet();
+
+<span class="hljs-comment">/**
+ * Find a user and all of his related addresses. This is a one to many relationship
+ */</span>
+<span class="hljs-variable">$criteria</span> = <span class="hljs-keyword">new</span> Criteria();
+<span class="hljs-variable">$criteria</span>-&gt;addDataKey(<span class="hljs-string">'billing_addresses.*'</span>)
+         -&gt;addFilter(<span class="hljs-string">'id'</span>, <span class="hljs-string">'=='</span>, <span class="hljs-number">123</span>);
+<span class="hljs-variable">$user</span> = <span class="hljs-variable">$userMapper</span>-&gt;find(<span class="hljs-variable">$criteria</span>);
+
+<span class="hljs-keyword">echo</span> <span class="hljs-variable">$user</span>-&gt;getFirstName();
+<span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$user</span>-&gt;getBillingAddresses() <span class="hljs-keyword">as</span> <span class="hljs-variable">$billingAddress</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-variable">$billingAddress</span>-&gt;getStreet();
+}
+</code></pre>
+<p>@todo Some additional magic is also performed to merge subqueries, where the relationship is
+one to many. For example, if a customer may have many addresses, the addresses are set to an
+addresses key on the customer row rather than returning multiple customer rows, one for each
+address as is returned by the query. Need to document this behavior. Also, not entirely sure
+of the naming convention for plural names. Need to review.</p>
+<p>@todo Organize the documentation below. This was all copied as is from existing documentation.</p>
+<h3 id="find">Find</h3>
+<p>The find method has the following signature:</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">find</span><span class="hljs-params">(<span class="hljs-variable">$criteria</span> = null, <span class="hljs-variable">$returnFormat</span> = MapperInterface::RETURN_AS_ENTITY, <span class="hljs-variable">$mergeData</span> = false)</span>;</span>
+</code></pre>
+<p>The $returnFormat parameter specifies the format in which the method should return data. The possible values are:</p>
+<ul>
+<li>MapperInterface::RETURN_AS_VALUE</li>
+<li>MapperInterface::RETURN_AS_COLUMN</li>
+<li>MapperInterface::RETURN_AS_ENTITY</li>
+<li>MapperInterface::RETURN_AS_ARRAY</li>
+<li>MapperInterface::RETURN_AS_RESULT_SET</li>
+<li>MapperInterface::RETURN_AS_PAGINATOR</li>
+<li>MapperInterface::RETURN_AS_MULTI_DIMENSIONAL_ARRAY</li>
+</ul>
+<p>The $mergeData parameter specifies whether to combine related matching data into a more hierarchical format which
+makes more sense from a php perspective. The reason for this is that one to many type relationships will provide the same
+row data over and over for each joined row.</p>
+<p>Aliases may also be used in criteria when selecting data keys. This can be useful when querying for a one to many type of
+relationship;</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-variable">$userMapper</span> = <span class="hljs-variable">$this</span>-&gt;getServiceLocator(<span class="hljs-string">'ForgeUser\Mapper\User'</span>);
+<span class="hljs-variable">$criteria</span> = <span class="hljs-keyword">new</span> Criteria();
+<span class="hljs-variable">$criteria</span>-&gt;addDataKey([<span class="hljs-string">'addresses'</span> =&gt; <span class="hljs-string">'address.*'</span>]);
+<span class="hljs-variable">$users</span> = <span class="hljs-variable">$userMapper</span>-&gt;find(<span class="hljs-variable">$criteria</span>, MapperInterface::RETURN_AS_MULTI_DIMENSIONAL_ARRAY, <span class="hljs-keyword">true</span>);
+
+<span class="hljs-comment">/**
+Array(
+    0 =&gt; Array(
+        first_name =&gt; 'John',
+        last_name =&gt; 'Smith',
+        //...
+        'addresses' =&gt; Array(
+            0 =&gt; Array(
+                street =&gt; '123 Test St.',
+                city =&gt; 'Dallas',
+                state =&gt; 'TX',
+                zip =&gt; '75001'
+            ),
+            1 =&gt; Array(
+                street =&gt; '456 Test St.',
+                city =&gt; 'Dallas',
+                state =&gt; 'TX',
+                zip =&gt; '75001'
+            )
+        )
+    )
+)
+*/</span>
+</code></pre>
+<h3 id="relationships-data-stores">Relationships &amp; Data Stores</h3>
+<p>Database mappers have extra functionality built into them for managing relationships between entities. This logic allows
+for querying of related data in a single request. Database mappers can also handle entities with data stored across
+multiple tables (think EAV). This is done through &quot;Data Stores&quot; which are a connection to another table or set of tables
+when additional data is stored.</p>
+<p>In order for this to work, there is a small amount of meta data mapping required. This is done via the main application
+config in the node &quot;entity_persistence_map&quot;. By default, in Forge, this configuration is broken out into a separate
+config file per module called &quot;entity-persistence-map.config.php&quot;. This config can be spread across many modules and
+is merged into one. This means that a module can easily inject its relationship definitions into another module.</p>
+<p>Below is an example of the file format along with annotations.</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+
+<span class="hljs-keyword">return</span> [
+    <span class="hljs-string">'entity_persistence_map'</span> =&gt; [
+        <span class="hljs-comment">// Entity code for the user entity</span>
+        <span class="hljs-string">'user'</span> =&gt; [
+            <span class="hljs-comment">// Main database table used to store the user entity</span>
+            <span class="hljs-string">'table'</span> =&gt; <span class="hljs-string">'user'</span>,
+            <span class="hljs-comment">// Mapping of entity properties to database columns</span>
+            <span class="hljs-string">'map'</span> =&gt; [
+                <span class="hljs-string">'id'</span> =&gt; <span class="hljs-string">'id'</span>,
+                <span class="hljs-string">'role_id'</span> =&gt; <span class="hljs-string">'role_id'</span>,
+                <span class="hljs-string">'username'</span> =&gt; <span class="hljs-string">'username'</span>,
+                <span class="hljs-string">'password'</span> =&gt; <span class="hljs-string">'password'</span>,
+                <span class="hljs-string">'email'</span> =&gt; <span class="hljs-string">'email'</span>,
+                <span class="hljs-string">'first_name'</span> =&gt; <span class="hljs-string">'first_name'</span>,
+                <span class="hljs-string">'last_name'</span> =&gt; <span class="hljs-string">'last_name'</span>,
+                <span class="hljs-string">'enabled'</span> =&gt; <span class="hljs-string">'enabled'</span>,
+                <span class="hljs-string">'profile_image_filename'</span> =&gt; <span class="hljs-string">'profile_image_filename'</span>,
+            ],
+            <span class="hljs-string">'relationships'</span> =&gt; [
+                <span class="hljs-comment">// Entity code of the role entity</span>
+                <span class="hljs-string">'role'</span> =&gt; [
+                    <span class="hljs-comment">// Relationship type. Can be a fully qualified class name or the last part of a class name under</span>
+                    <span class="hljs-comment">// Forge\Model\Mapper\Database\Relationship</span>
+                    <span class="hljs-string">'type'</span> =&gt; <span class="hljs-string">'Simple'</span>,
+                    <span class="hljs-comment">// Relationship options</span>
+                    <span class="hljs-string">'options'</span> =&gt; [
+                        <span class="hljs-comment">// The "Simple" relationship types assumes a direct connection to the target table and requires</span>
+                        <span class="hljs-comment">// a list of column pairs that connect the two. The entity code is used for the table here.</span>
+                        <span class="hljs-string">'column_pairs'</span> =&gt; [
+                            <span class="hljs-string">'user.role_id'</span> =&gt; <span class="hljs-string">'role.id'</span>,
+                        ],
+                    ],
+                ],
+            ],
+        ],
+        <span class="hljs-string">'role'</span> =&gt; [
+            <span class="hljs-string">'table'</span> =&gt; <span class="hljs-string">'role'</span>,
+            <span class="hljs-string">'map'</span> =&gt; [
+                <span class="hljs-string">'id'</span> =&gt; <span class="hljs-string">'id'</span>,
+                <span class="hljs-string">'code'</span> =&gt; <span class="hljs-string">'code'</span>,
+                <span class="hljs-string">'name'</span> =&gt; <span class="hljs-string">'name'</span>,
+            ],
+        ],
+        <span class="hljs-string">'some_entity'</span> =&gt; [
+            <span class="hljs-string">'table'</span> =&gt; <span class="hljs-string">'some_entity'</span>,
+            <span class="hljs-comment">// Data stores are used to connect to other tables in which this entity stores its data.</span>
+            <span class="hljs-string">'data_stores'</span> =&gt; [
+                <span class="hljs-string">'some_entity_additional_info'</span> =&gt; [ <span class="hljs-comment">// Data store alias</span>
+                    <span class="hljs-string">'type'</span> =&gt; <span class="hljs-string">'Simple'</span>, <span class="hljs-comment">// Relationship type</span>
+                    <span class="hljs-string">'table'</span> =&gt; <span class="hljs-string">'some_entity_additional_info'</span>, <span class="hljs-comment">// Data store db table name</span>
+                    <span class="hljs-string">'options'</span> =&gt; [
+                        <span class="hljs-string">'column_pairs'</span> =&gt; [
+                            <span class="hljs-string">'some_entity.some_id'</span> =&gt; <span class="hljs-string">'some_entity_additional_info.id'</span>,
+                        ],
+                    ],
+                ],
+            ],
+            <span class="hljs-string">'map'</span> =&gt; [
+                <span class="hljs-string">'id'</span> =&gt; <span class="hljs-string">'id'</span>,
+                <span class="hljs-comment">// The data store prefix is used in the mapping for entities stored in separate data stores</span>
+                <span class="hljs-string">'code'</span> =&gt; <span class="hljs-string">'some_entity_part.code'</span>,
+                <span class="hljs-string">'name'</span> =&gt; <span class="hljs-string">'name'</span>,
+            ],
+        ],
+    ],
+];
+</code></pre>
+<h2 id="to-do">To Do</h2>
+<ul>
+<li>Use of the $mergeData parameter when returning as a result set or paginator is not yet supported.</li>
+<li>Use of the $mergeData parameter without an &quot;id&quot; field from the database is not yet supported.</li>
+<li>batchSave(), batchCreate(), batchUpdate(), and update() do not yet support saving of entities with multiple data stores.</li>
+</ul>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../domain-modeling-and-data-persistence/README.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../domain-modeling-and-data-persistence/saving-data.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>

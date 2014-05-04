@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Software Requirements | Forge Framework Documentation</title>
+        <title>Saving Data | Forge Framework Documentation</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,13 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../installation/server-configuration.html" />
+        <link rel="next" href="../design-hierarchy/README.html" />
         
         
-        <link rel="prev" href="../installation/hardware-requirements.html" />
+        <link rel="prev" href="../domain-modeling-and-data-persistence/querying-data.html" />
         
 
-        <meta property="og:title" content="Software Requirements | Forge Framework Documentation">
+        <meta property="og:title" content="Saving Data | Forge Framework Documentation">
         <meta property="og:site_name" content="Forge Framework Documentation">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="2.2" data-basepath=".." data-revision="1399174603423">
+    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="5.2" data-basepath=".." data-revision="1399174603423">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -108,7 +108,7 @@
             <a href="https://github.com/kirkmadera/forge-framework-docs/issues" target="blank">Questions and Issues</a>
         </li>
         <li>
-            <a href="https://github.com/kirkmadera/forge-framework-docs/edit/master/installation/software-requirements.md" target="blank">Edit and Contribute</a>
+            <a href="https://github.com/kirkmadera/forge-framework-docs/edit/master/domain-modeling-and-data-persistence/saving-data.md" target="blank">Edit and Contribute</a>
         </li>
         <li class="divider"></li>
         
@@ -355,7 +355,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 48%;min-width: 44%;"></div>
+        <div class="inner" style="width: 84%;min-width: 80%;"></div>
     </div>
     <div class="chapters">
     
@@ -385,23 +385,23 @@
     
         <a href="../installation/software-requirements.html" title="Software Requirements" class="chapter done " data-progress="2.2" style="left: 48%;"></a>
     
-        <a href="../installation/server-configuration.html" title="Server Configuration" class="chapter  " data-progress="2.3" style="left: 52%;"></a>
+        <a href="../installation/server-configuration.html" title="Server Configuration" class="chapter done " data-progress="2.3" style="left: 52%;"></a>
     
-        <a href="../quick-start/README.html" title="Quick Start" class="chapter  new-chapter" data-progress="3" style="left: 56%;"></a>
+        <a href="../quick-start/README.html" title="Quick Start" class="chapter done new-chapter" data-progress="3" style="left: 56%;"></a>
     
-        <a href="../quick-start/application-flow.html" title="Application Flow Walk Through" class="chapter  " data-progress="3.1" style="left: 60%;"></a>
+        <a href="../quick-start/application-flow.html" title="Application Flow Walk Through" class="chapter done " data-progress="3.1" style="left: 60%;"></a>
     
-        <a href="../quick-start/application-configuration.html" title="Application Configuration" class="chapter  " data-progress="3.2" style="left: 64%;"></a>
+        <a href="../quick-start/application-configuration.html" title="Application Configuration" class="chapter done " data-progress="3.2" style="left: 64%;"></a>
     
-        <a href="../quick-start/module-example.html" title="A Basic Module Example" class="chapter  " data-progress="3.3" style="left: 68%;"></a>
+        <a href="../quick-start/module-example.html" title="A Basic Module Example" class="chapter done " data-progress="3.3" style="left: 68%;"></a>
     
-        <a href="../composite-view/README.html" title="Composite View" class="chapter  new-chapter" data-progress="4" style="left: 72%;"></a>
+        <a href="../composite-view/README.html" title="Composite View" class="chapter done new-chapter" data-progress="4" style="left: 72%;"></a>
     
-        <a href="../domain-modeling-and-data-persistence/README.html" title="Domain Modeling and Data Persistence" class="chapter  new-chapter" data-progress="5" style="left: 76%;"></a>
+        <a href="../domain-modeling-and-data-persistence/README.html" title="Domain Modeling and Data Persistence" class="chapter done new-chapter" data-progress="5" style="left: 76%;"></a>
     
-        <a href="../domain-modeling-and-data-persistence/querying-data.html" title="Querying Data" class="chapter  " data-progress="5.1" style="left: 80%;"></a>
+        <a href="../domain-modeling-and-data-persistence/querying-data.html" title="Querying Data" class="chapter done " data-progress="5.1" style="left: 80%;"></a>
     
-        <a href="../domain-modeling-and-data-persistence/saving-data.html" title="Saving Data" class="chapter  " data-progress="5.2" style="left: 84%;"></a>
+        <a href="../domain-modeling-and-data-persistence/saving-data.html" title="Saving Data" class="chapter done " data-progress="5.2" style="left: 84%;"></a>
     
         <a href="../design-hierarchy/README.html" title="Design Hierarchy" class="chapter  new-chapter" data-progress="6" style="left: 88%;"></a>
     
@@ -416,31 +416,82 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_14">
+                    <section class="normal" id="section-gitbook_3">
                     
-                        <h1 id="software-requirements">Software Requirements</h1>
-<p>Forge Framework is still in very early development stages, so we are using somewhat
-bleeding edge technologies with the expectation that they will be stable and widely
-available at the time that Forge Framework is released.</p>
-<h2 id="current-requirements">Current Requirements</h2>
-<ul>
-<li><strong>PHP &gt;=5.5.3</strong> - Forge uses password_hash() from 5.5. Not sure if any 5.6
-features/functions will be needed.</li>
-<li><strong>ZF2 &gt;=2.3</strong></li>
-<li><strong>MySQL &gt;=5.5</strong></li>
-<li><strong>PHP intl extension</strong> - This is currently required because it made coding some of the
-translation stuff easier. This will be removed as a requirement on release and made a
-recommendation instead.</li>
-<li><strong>PHP json extension</strong> - Currently required to perform json tasks. May use ZF2&#39;s Json
-classes in the future to avoid forcing a user to install a PHP extension</li>
-</ul>
-<h2 id="planned-requirements-depending-on-stability-and-availability-at-release-time-">Planned Requirements (Depending on stability and availability at release time)</h2>
-<ul>
-<li><strong>PHP 5.6 recommended</strong> - Will probably support 5.5</li>
-<li><strong>MySQL 5.6 required</strong> - InnoDb Fulltext search is expected to be used</li>
-<li><strong>PHP intl extension recommended</strong></li>
-<li><strong>PHP json extension recommended</strong></li>
-</ul>
+                        <h1 id="saving-data">Saving data</h1>
+<p>@todo Document saving data. This was copied over from other existing documentation and needs to
+be cleaned.</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-variable">$userMapper</span> = <span class="hljs-variable">$this</span>-&gt;getServiceLocator(<span class="hljs-string">'ForgeUser\Mapper\User'</span>);
+
+<span class="hljs-comment">// Create a new user</span>
+<span class="hljs-variable">$user</span> = <span class="hljs-variable">$userMapper</span>-&gt;getEntityPrototype();
+<span class="hljs-variable">$user</span>-&gt;setFirstName(<span class="hljs-string">'John'</span>)
+     -&gt;setLastName(<span class="hljs-string">'Smith'</span>)
+     -&gt;setUsername(<span class="hljs-string">'john.smith'</span>)
+     -&gt;setEmail(<span class="hljs-string">'john.smith@example.com'</span>)
+     -&gt;setPassword(<span class="hljs-variable">$user</span>-&gt;encryptPassword(<span class="hljs-string">'SomePassword'</span>))
+     -&gt;setEnabled(<span class="hljs-keyword">true</span>);
+<span class="hljs-variable">$userId</span> = <span class="hljs-variable">$userMapper</span>-&gt;saveEntity(<span class="hljs-variable">$user</span>);
+
+<span class="hljs-comment">// Update an existing user</span>
+<span class="hljs-variable">$user</span> = <span class="hljs-variable">$userMapper</span>-&gt;find(<span class="hljs-number">123</span>);
+<span class="hljs-variable">$user</span>-&gt;setUsername(<span class="hljs-string">'john.smith123'</span>);
+<span class="hljs-variable">$rowWasUpdated</span> = <span class="hljs-variable">$userMapper</span>-&gt;saveEntity(<span class="hljs-variable">$user</span>);
+
+<span class="hljs-comment">// Import many users at once</span>
+<span class="hljs-variable">$user</span> = <span class="hljs-variable">$userMapper</span>-&gt;getEntityPrototype();
+<span class="hljs-variable">$userData</span> = [
+    [
+        <span class="hljs-string">'first_name'</span> =&gt; <span class="hljs-string">'John'</span>,
+        <span class="hljs-string">'last_name'</span> =&gt; <span class="hljs-string">'Smith'</span>,
+        <span class="hljs-string">'username'</span> =&gt; <span class="hljs-string">'john.smith'</span>,
+        <span class="hljs-string">'email'</span> =&gt; <span class="hljs-string">'john.smith@example.com'</span>,
+        <span class="hljs-string">'password'</span> =&gt; <span class="hljs-variable">$user</span>-&gt;encryptPassword(<span class="hljs-string">'SomePassword'</span>)
+        <span class="hljs-string">'enabled'</span> =&gt; <span class="hljs-keyword">true</span>,
+    ],
+    [
+        <span class="hljs-string">'first_name'</span> =&gt; <span class="hljs-string">'Bob'</span>,
+        <span class="hljs-string">'last_name'</span> =&gt; <span class="hljs-string">'Smith'</span>,
+        <span class="hljs-string">'username'</span> =&gt; <span class="hljs-string">'bob.smith'</span>,
+        <span class="hljs-string">'email'</span> =&gt; <span class="hljs-string">'bob.smith@example.com'</span>,
+        <span class="hljs-string">'password'</span> =&gt; <span class="hljs-variable">$user</span>-&gt;encryptPassword(<span class="hljs-string">'SomePassword'</span>)
+        <span class="hljs-string">'enabled'</span> =&gt; <span class="hljs-keyword">true</span>,
+    ],
+];
+<span class="hljs-variable">$numUsersCreated</span> = <span class="hljs-variable">$userMapper</span>-&gt;batchCreate(<span class="hljs-variable">$userData</span>);
+
+<span class="hljs-comment">// Import many user updates at once. All rows must have the same keys</span>
+<span class="hljs-variable">$user</span> = <span class="hljs-variable">$userMapper</span>-&gt;getEntityPrototype();
+<span class="hljs-variable">$userData</span> = [
+    [
+        <span class="hljs-string">'id'</span> =&gt; <span class="hljs-number">123</span>,
+        <span class="hljs-string">'username'</span> =&gt; <span class="hljs-string">'john.smith123'</span>,
+        <span class="hljs-string">'email'</span> =&gt; <span class="hljs-string">'john.smith123@example.com'</span>,
+        <span class="hljs-string">'enabled'</span> =&gt; <span class="hljs-keyword">true</span>,
+    ],
+    [
+        <span class="hljs-string">'id'</span> =&gt; <span class="hljs-number">456</span>,
+        <span class="hljs-string">'username'</span> =&gt; <span class="hljs-string">'bob.smith123'</span>,
+        <span class="hljs-string">'email'</span> =&gt; <span class="hljs-string">'bob.smith123@example.com'</span>,
+        <span class="hljs-string">'enabled'</span> =&gt; <span class="hljs-keyword">true</span>,
+    ],
+];
+<span class="hljs-variable">$numUsersUpdated</span> = <span class="hljs-variable">$userMapper</span>-&gt;batchUpdate(<span class="hljs-variable">$userData</span>);
+
+<span class="hljs-comment">// The same update array can also be used for a batchSave() method. All rows must still have the same keys. New rows</span>
+<span class="hljs-comment">// should have an "id" key, but it should be set to null</span>
+<span class="hljs-variable">$numUsersUpdatedOrCreated</span> = <span class="hljs-variable">$userMapper</span>-&gt;batchSave(<span class="hljs-variable">$userData</span>);
+
+<span class="hljs-comment">// Update many users at the same time with the same data</span>
+<span class="hljs-comment">// Specifically, set users with ids 123, 456, or 789 to disabled</span>
+<span class="hljs-variable">$userMapper</span>-&gt;update([
+    <span class="hljs-string">'enabled'</span> =&gt; <span class="hljs-keyword">false</span>,
+], [<span class="hljs-number">123</span>, <span class="hljs-number">456</span>, <span class="hljs-number">789</span>]);
+
+<span class="hljs-comment">// Delete many users at once</span>
+<span class="hljs-variable">$userMapper</span>-&gt;delete([<span class="hljs-number">123</span>, <span class="hljs-number">456</span>, <span class="hljs-number">789</span>]);
+</code></pre>
 
                     
                     </section>
@@ -450,10 +501,10 @@ classes in the future to avoid forcing a user to install a PHP extension</li>
         </div>
 
         
-        <a href="../installation/hardware-requirements.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        <a href="../domain-modeling-and-data-persistence/querying-data.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../installation/server-configuration.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        <a href="../design-hierarchy/README.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
