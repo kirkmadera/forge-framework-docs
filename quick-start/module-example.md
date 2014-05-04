@@ -30,7 +30,7 @@ return [
 ];
 ```
 
-## Describe Module
+## Describe the Module
 
 Then, we create a Module.php file which describes the module. For the sake of simplicity, all
 configuration has been included directly within the getConfig() method. When configuration gets
@@ -102,7 +102,7 @@ class Module extends StandardModule
 }
 ```
 
-## Controller
+## Create the Controller
 
 Now, we can create a controller. It will do nothing other than return a composite view.
 
