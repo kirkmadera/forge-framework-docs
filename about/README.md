@@ -7,6 +7,8 @@ a clear interface and be easily replaceable with another implementation. The arc
 of Forge Framework allows for full customization of any piece of functionality or design,
 while retaining the ability to upgrade the core framework without refactoring.
 
+Forge Framework is strongly rooted in sound design principles gained through experience and the works of many incredibly smart people who have taken the time to document their learning. This is not just another web framework. This is a long standing framework that will continue to grow with the ever changing needs of businesses and individuals.
+
 ## Guiding Principles
 
 * Must allow for completely self-contained modules
@@ -34,28 +36,3 @@ while retaining the ability to upgrade the core framework without refactoring.
   architecture and visual design
 * Must use responsive abstract and default theme
 * Should use Composer to manage module dependencies and recommendations
-
-## Software Requirements & Recommendations
-
-Forge Framework is still in very early development stages, so we are using somewhat bleeding
-edge technologies with the expectation that they will be stable and widley available at the
-time that Forge Framework is released.
-
-### Current Requirements
-
-* PHP >=5.5.3 - Forge uses password_hash() from 5.5. Not sure if any 5.6 features/functions
-  will be needed.
-* ZF2 >= 2.3
-* MySQL 5.5
-* PHP intl extension - This is currently required because it made coding some of the
-  translation stuff easier. This will be removed as a requirement on release and made a
-  recommendation instead.
-* PHP json extension - Currently required to perform json tasks. May use ZF2's Json classes
-  in the future to avoid forcing a user to install a PHP extension
-
-### Planned Requirements (Depending on stability and availability at release time)
-
-* PHP 5.6 recommended - Will probably support 5.5
-* MySQL 5.6 recommended - InnoDb Fulltext search is expected to be used.
-* PHP intl extension recommended
-* PHP json extension recommended
