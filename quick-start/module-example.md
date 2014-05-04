@@ -1,8 +1,8 @@
 # A Basic Module Example
 
-We will build an HelloWorld module. This is the minimum required of a Forge module.
+We will build an HelloWorld module. This is the minimum required to create a Forge module.
 
-## Inform Application
+## Inform the Application
 
 First, we add the module to application.global.config.php to make the application aware of it.
 
@@ -15,7 +15,8 @@ return [
         // Forge modules first
         'ForgeApplication',
         'ForgeAcl',
-        //...
+        // More Forge modules...
+
         // Third party modules second
         'AcmeWidgets',
 
@@ -30,7 +31,11 @@ return [
 ```
 
 ## Describe Module
-Then, we create a Module.php file which describes the module. For the sake of simplicity, all configuration has been included directly within the getConfig() method. When configuration gets more complex, it is recommended to create config files under a "config" directory within the module and include them in the getConfig() method.
+
+Then, we create a Module.php file which describes the module. For the sake of simplicity, all
+configuration has been included directly within the getConfig() method. When configuration gets
+more complex, it is recommended to create config files under a "config" directory within the
+module and include them in the getConfig() method.
 
 ```php
 <?php
@@ -55,13 +60,6 @@ class Module extends StandardModule
                     __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
                 ),
             ),
-        );
-    }
-
-    public function getCompositeViewDesignPaths()
-    {
-        return array(
-            'frontend/abstract',
         );
     }
 
@@ -95,7 +93,8 @@ class Module extends StandardModule
             ],
             'controllers' => [
                 'invokables' => [
-                    'HelloWorld\Controller\HelloWorldController' => 'HelloWorld\Controller\HelloWorldController',
+                    'HelloWorld\Controller\HelloWorldController' =>
+                        'HelloWorld\Controller\HelloWorldController',
                 ],
             ],
         ];
@@ -109,7 +108,7 @@ Now, we can create a controller. It will do nothing other than return a composit
 
 ```php
 <?php
-// modules/local/HelloWorld/src/Controller/HellowWorldController.php
+// modules/local/HelloWorld/src/Controller/HelloWorldController.php
 
 namespace HelloWorld\Controller;
 
