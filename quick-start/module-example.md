@@ -1,1 +1,184 @@
 # A Basic Module Example
+
+We will build an HelloWorld module. This is the minimum required of a Forge module.
+
+## Inform Application
+
+First, we add the module to application.global.config.php to make the application aware of it.
+
+```php
+<?php
+// configs/application.global.config.php
+
+return [
+    'modules' => [
+        // Forge modules first
+        'ForgeApplication',
+        'ForgeAcl',
+        //...
+        // Third party modules second
+        'AcmeWidgets',
+
+        // Then, local modules
+        'HelloWorld',
+
+        // Then, Application module
+        'Application',
+    ],
+    //...
+];
+```
+
+## Describe Module
+Then, we create a Module.php file which describes the module. For the sake of simplicity, all configuration has been included directly within the getConfig() method. When configuration gets more complex, it is recommended to create config files under a "config" directory within the module and include them in the getConfig() method.
+
+```php
+<?php
+// modules/local/HelloWorld/Module.php
+
+namespace HelloWorld;
+
+use Forge\ModuleManager\StandardModule;
+
+class Module extends StandardModule
+{
+    public function getBasePath()
+    {
+        return __DIR__;
+    }
+
+    public function getAutoloaderConfig()
+    {
+        return array(
+            'Zend\Loader\StandardAutoloader' => array(
+                'namespaces' => array(
+                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
+                ),
+            ),
+        );
+    }
+
+    public function getCompositeViewDesignPaths()
+    {
+        return array(
+            'frontend/abstract',
+        );
+    }
+
+    public function getConfig()
+    {
+        return [
+            'version' => '0.1.0',
+            'navigation' => [
+                'main' => [
+                    'helloworld' => [
+                        'label' => 'Hello World',
+                        'route' => 'helloworld',
+                    ],
+                ],
+            ],
+            'router' => [
+                'routes' => [
+                    'helloworld' => [
+                        'type' => 'literal',
+                        'options' => [
+                            'route'    => '/hello-world',
+                            'defaults' => [
+                                '__NAMESPACE__' => 'HelloWorld\Controller',
+                                'module'        => 'HelloWorld',
+                                'controller'    => 'HelloWorldController',
+                                'action'        => 'index',
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+            'controllers' => [
+                'invokables' => [
+                    'HelloWorld\Controller\HelloWorldController' => 'HelloWorld\Controller\HelloWorldController',
+                ],
+            ],
+        ];
+    }
+}
+```
+
+## Controller
+
+Now, we can create a controller. It will do nothing other than return a composite view.
+
+```php
+<?php
+// modules/local/HelloWorld/src/Controller/HellowWorldController.php
+
+namespace HelloWorld\Controller;
+
+use Forge\Mvc\Controller\ActionController;
+
+class HelloWorldController extends ActionController
+{
+    public function indexAction()
+    {
+        return $this->getCompositeView();
+    }
+}
+```
+
+## Create the View
+
+The view is made up of two pieces. A view template and view configuration. First, we will create the template.
+
+```php
+<?php
+// modules/local/HelloWorld/design/frontend/abstract/view/helloworld/index.phtml
+?>
+Hello World!
+```
+
+Then we create the view configuration to include the template within the view and updated the page title.
+
+```php
+<?php
+// modules/local/HelloWorld/design/frontend/abstract/config/view.config.php
+
+return [
+    'helloworld_helloworld_index' => [
+        'priority' => 10,
+        'conditions' => [
+            'module' => 'hello-world',
+            'controller' => 'hello-world',
+            'action' => 'index',
+        ],
+        'updates' => [
+            'viewHelpers' => [
+                'headTitle' => [
+                    'actions' => [
+                        'addPageTitle' => [
+                            'setType' => 'PREPEND',
+                            'title' => 'Hello World!',
+                        ],
+                    ],
+                ],
+            ],
+            'blocks' => [
+                'merge' => [
+                    'main_content_children' => [
+                        'children' => [
+                            'content' => [
+                                'template' => 'helloworld/index',
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ],
+];
+```
+
+## View the Hello World Page
+
+If you have done everything correctly, you should be able to browse to
+http://yourdomain.com/hello-world. You should see the content of the page showing "Hello
+World!". You should also see that the page meta title has been changed to "Hello World!".
+
