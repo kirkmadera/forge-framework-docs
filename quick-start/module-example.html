@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="3.3" data-basepath=".." data-revision="1399184304394">
+    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="3.3" data-basepath=".." data-revision="1399226250582">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -458,34 +458,19 @@ module and include them in the getConfig() method.</p>
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Module</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">StandardModule</span>
 {</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getBasePath</span><span class="hljs-params">()</span>
-    {</span>
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">__DIR__</span>;
-    }
-
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getAutoloaderConfig</span><span class="hljs-params">()</span>
-    {</span>
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">array</span>(
-            <span class="hljs-string">'Zend\Loader\StandardAutoloader'</span> =&gt; <span class="hljs-keyword">array</span>(
-                <span class="hljs-string">'namespaces'</span> =&gt; <span class="hljs-keyword">array</span>(
-                    <span class="hljs-keyword">__NAMESPACE__</span> =&gt; <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/src/'</span> . <span class="hljs-keyword">__NAMESPACE__</span>,
-                ),
-            ),
-        );
-    }
-
     <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getConfig</span><span class="hljs-params">()</span>
     {</span>
         <span class="hljs-keyword">return</span> [
+            <span class="hljs-comment">/**
+             * version, base_path, and namespace are the minimum required nodes
+             */</span>
             <span class="hljs-string">'version'</span> =&gt; <span class="hljs-string">'0.1.0'</span>,
-            <span class="hljs-string">'navigation'</span> =&gt; [
-                <span class="hljs-string">'main'</span> =&gt; [
-                    <span class="hljs-string">'helloworld'</span> =&gt; [
-                        <span class="hljs-string">'label'</span> =&gt; <span class="hljs-string">'Hello World'</span>,
-                        <span class="hljs-string">'route'</span> =&gt; <span class="hljs-string">'helloworld'</span>,
-                    ],
-                ],
-            ],
+            <span class="hljs-string">'base_path'</span> =&gt; <span class="hljs-keyword">__DIR__</span>,
+            <span class="hljs-string">'namespace'</span> =&gt; <span class="hljs-keyword">__NAMESPACE__</span>,
+
+            <span class="hljs-comment">/**
+             * Establishes the "/hello-world" route
+             */</span>
             <span class="hljs-string">'router'</span> =&gt; [
                 <span class="hljs-string">'routes'</span> =&gt; [
                     <span class="hljs-string">'helloworld'</span> =&gt; [
@@ -502,6 +487,10 @@ module and include them in the getConfig() method.</p>
                     ],
                 ],
             ],
+
+            <span class="hljs-comment">/**
+             * Tell the service manager how to create the controller.
+             */</span>
             <span class="hljs-string">'controllers'</span> =&gt; [
                 <span class="hljs-string">'invokables'</span> =&gt; [
                     <span class="hljs-string">'HelloWorld\Controller\HelloWorldController'</span> =&gt;
@@ -512,6 +501,10 @@ module and include them in the getConfig() method.</p>
     }
 }
 </code></pre>
+<p>@todo Remove the requirement to include the &quot;controllers&quot; node and fall back to the DI
+      container.
+@todo Add generic catch-all route module/controller/action and remove the route entirely
+      from this module config.</p>
 <h2 id="create-the-controller">Create the Controller</h2>
 <p>Now, we can create a controller. It will do nothing other than return a composite view.</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
