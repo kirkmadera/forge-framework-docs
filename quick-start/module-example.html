@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="3.3" data-basepath=".." data-revision="1399181559367">
+    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="3.3" data-basepath=".." data-revision="1399181873654">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -419,8 +419,8 @@
                     <section class="normal" id="section-gitbook_18">
                     
                         <h1 id="a-basic-module-example">A Basic Module Example</h1>
-<p>We will build an HelloWorld module. This is the minimum required of a Forge module.</p>
-<h2 id="inform-application">Inform Application</h2>
+<p>We will build an HelloWorld module. This is the minimum required to create a Forge module.</p>
+<h2 id="inform-the-application">Inform the Application</h2>
 <p>First, we add the module to application.global.config.php to make the application aware of it.</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
 <span class="hljs-comment">// configs/application.global.config.php</span>
@@ -430,7 +430,8 @@
         <span class="hljs-comment">// Forge modules first</span>
         <span class="hljs-string">'ForgeApplication'</span>,
         <span class="hljs-string">'ForgeAcl'</span>,
-        <span class="hljs-comment">//...</span>
+        <span class="hljs-comment">// More Forge modules...</span>
+
         <span class="hljs-comment">// Third party modules second</span>
         <span class="hljs-string">'AcmeWidgets'</span>,
 
@@ -444,7 +445,10 @@
 ];
 </code></pre>
 <h2 id="describe-module">Describe Module</h2>
-<p>Then, we create a Module.php file which describes the module. For the sake of simplicity, all configuration has been included directly within the getConfig() method. When configuration gets more complex, it is recommended to create config files under a &quot;config&quot; directory within the module and include them in the getConfig() method.</p>
+<p>Then, we create a Module.php file which describes the module. For the sake of simplicity, all
+configuration has been included directly within the getConfig() method. When configuration gets
+more complex, it is recommended to create config files under a &quot;config&quot; directory within the
+module and include them in the getConfig() method.</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
 <span class="hljs-comment">// modules/local/HelloWorld/Module.php</span>
 
@@ -467,13 +471,6 @@
                     <span class="hljs-keyword">__NAMESPACE__</span> =&gt; <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/src/'</span> . <span class="hljs-keyword">__NAMESPACE__</span>,
                 ),
             ),
-        );
-    }
-
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getCompositeViewDesignPaths</span><span class="hljs-params">()</span>
-    {</span>
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">array</span>(
-            <span class="hljs-string">'frontend/abstract'</span>,
         );
     }
 
@@ -507,7 +504,8 @@
             ],
             <span class="hljs-string">'controllers'</span> =&gt; [
                 <span class="hljs-string">'invokables'</span> =&gt; [
-                    <span class="hljs-string">'HelloWorld\Controller\HelloWorldController'</span> =&gt; <span class="hljs-string">'HelloWorld\Controller\HelloWorldController'</span>,
+                    <span class="hljs-string">'HelloWorld\Controller\HelloWorldController'</span> =&gt;
+                        <span class="hljs-string">'HelloWorld\Controller\HelloWorldController'</span>,
                 ],
             ],
         ];
@@ -517,7 +515,7 @@
 <h2 id="controller">Controller</h2>
 <p>Now, we can create a controller. It will do nothing other than return a composite view.</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
-<span class="hljs-comment">// modules/local/HelloWorld/src/Controller/HellowWorldController.php</span>
+<span class="hljs-comment">// modules/local/HelloWorld/src/Controller/HelloWorldController.php</span>
 
 <span class="hljs-keyword">namespace</span> <span class="hljs-title">HelloWorld</span>\<span class="hljs-title">Controller</span>;
 
