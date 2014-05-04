@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="5.1" data-basepath=".." data-revision="1399183787129">
+    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="5.1" data-basepath=".." data-revision="1399184304394">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -442,7 +442,7 @@ than the first three signatures account for.</li>
 </ul>
 <h3 id="learning-through-examples-">Learning Through Examples:</h3>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
-<span class="hljs-comment">// Retrieve user data link to a user with the id 123 and return as a User entity</span>
+<span class="hljs-comment">// Retrieve user with the id 123 and return as a User entity</span>
 <span class="hljs-variable">$criteria</span> = <span class="hljs-keyword">new</span> Criteria();
 <span class="hljs-variable">$criteria</span>-&gt;addFilter(<span class="hljs-string">'id'</span>, <span class="hljs-string">'=='</span>, <span class="hljs-number">123</span>);
 <span class="hljs-variable">$userMapper</span> = <span class="hljs-variable">$this</span>-&gt;getServiceLocator(<span class="hljs-string">'ForgeUser\Mapper\User'</span>);
@@ -458,7 +458,6 @@ field on the entity. The ID is tied to the user, not to the database. The <em>Ma
 extremely verbose.</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
 <span class="hljs-variable">$criteria</span> = <span class="hljs-keyword">new</span> Criteria([<span class="hljs-string">'id'</span> =&gt; <span class="hljs-number">123</span>]);
-<span class="hljs-variable">$userMapper</span> = <span class="hljs-variable">$this</span>-&gt;getServiceLocator(<span class="hljs-string">'ForgeUser\Mapper\User'</span>);
 <span class="hljs-variable">$user</span> = <span class="hljs-variable">$userMapper</span>-&gt;find(<span class="hljs-variable">$criteria</span>);
 </code></pre>
 <p>Which can be reduced to:</p>
@@ -468,7 +467,6 @@ extremely verbose.</p>
 </code></pre>
 <p>...which can further be reduced to...</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
-<span class="hljs-variable">$userMapper</span> = <span class="hljs-variable">$this</span>-&gt;getServiceLocator(<span class="hljs-string">'ForgeUser\Mapper\User'</span>);
 <span class="hljs-variable">$user</span> = <span class="hljs-variable">$userMapper</span>-&gt;find(<span class="hljs-number">123</span>);
 </code></pre>
 <p>The find() method of a <em>Mapper</em> expects a <em>Criteria</em> object. If a <em>Criteria</em> object is not
@@ -539,8 +537,8 @@ MapperInterface::RETURN_AS_MULTI_DIMENSIONAL_ARRAY);
 from property.</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
 <span class="hljs-comment">/**
- * Find all enabled users with their role name, sorted by last name, then first name. Role is a
- * related entity to user.
+ * Find all enabled users with their role name, sorted by last name, then first name. Role is
+ * a related entity to user.
  */</span>
 <span class="hljs-variable">$criteria</span> = <span class="hljs-keyword">new</span> Criteria();
 <span class="hljs-variable">$criteria</span>-&gt;addDataKey(<span class="hljs-string">'role.name'</span>)
