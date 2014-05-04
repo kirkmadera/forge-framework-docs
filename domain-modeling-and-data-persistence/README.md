@@ -30,29 +30,42 @@ The following PHP class types are used in Forge Framework:
    that allow data to be queried in terms of entities.
 
 ## Entity
-An entity is a domain object with business properties and logic. It has no awareness of the persistence layer or mapper
-classes. This means that lazy loading of data is not possible, which can make for a slightly awkward workflow for those
-used to active record. For example, $user->getBillingAddress() won't work unless you've already loaded the
-billing address record from the database into the user entity. This does mean, however, that your domain objects have
-a clear objective and only do what they do best.
+An entity is a domain object with business properties and logic. It has no awareness of the
+persistence layer or mapper classes.
 
-All entities clearly define the properties they work with. The getProvidedData() method on all entities returns an array
-of all data keys relevant directly to this entity, not including related entities' data. The
-getProvidedData() method is also used help facilitate the getArrayCopy() and populate() methods to implement the
-ArraySerializeable interface. This allows entities to be used directly with forms using ZF2's bind() functionality. The
-populate method is also used by the database mapper to create the entity populated with all data returned from the
-persistence layer. Entities also can store additional data in an arbitrary data array. The populate() method uses the
-ClassMethods hydrator to populate all recognized data points from getProvidedData(), then adds to the generic data array
-for unrecognized properties.
+All entities clearly define the properties they work with. The getProvidedData() method on all
+entities returns an array of all data keys relevant directly to this entity, not including
+related entities' data. The getProvidedData() method is also used help facilitate the
+getArrayCopy() and populate() methods to implement the ArraySerializeable interface. This
+allows entities to be used directly with forms using ZF2's bind() functionality. The populate
+method is also used by the database mapper to create the entity populated with all data
+returned from the persistence layer. Entities also can store additional data in an arbitrary
+data array. The populate() method uses the ClassMethods hydrator to populate all recognized
+data points from getProvidedData(), then adds to the generic data array for unrecognized
+properties.
 
-All entities also provide a general input filter which can be used for validation. This is done by implementing the
-InputFilterAwareInterface interface.
+All entities also provide a general input filter which can be used for validation. This is done
+by implementing the InputFilterAwareInterface interface.
 
-Internally, entities store an $isNew flag, to help mappers determine whether the entity is new or exists already in
-storage.
+Internally, entities store an $isNew flag, to help mappers determine whether the entity is new
+or exists already in storage.
 
 ## Mapper
-All mapper classes implement these methods per the MapperInterface: find(), createEntity(), updateEntity(), deleteEntity(), batchSave(),
-batchCreate(), batchUpdate(), update(), and delete(). These are not specific to the database mapper implementation. The
-data source for these mappers could be anything. The primary job of the mapper is to interpret the criteria passed to it
-in domain logic terms and interact with the persistence layer accordingly.
+All mapper classes implement these methods per the MapperInterface: find(), createEntity(),
+updateEntity(), deleteEntity(), batchSave(), batchCreate(), batchUpdate(), update(), and
+delete(). These are not specific to the database mapper implementation. The data source for
+these mappers could be anything. The primary job of the mapper is to interpret the criteria
+passed to it in domain logic terms and interact with the persistence layer accordingly.
+
+## Criteria
+
+The Criteria class is used for querying data in terms of entities. No knowledge is required of
+the underlying persistence mechanism or data structure; only entity data and relationships.
+Criteria can be used for common simple use cases with very minimal code or can be used for
+complex queries.
+
+The Criteria class cannot handle every possible scenario. In instances where use of the
+Criteria class becomes too cumbersome, create a specific method on the Mapper class instead.
+Never directly access or write to the persistence layer from any class other than a Mapper.
+This will break down the barriers between the domain and persistence layers and cause issues in
+the future.
