@@ -47,34 +47,19 @@ use Forge\ModuleManager\StandardModule;
 
 class Module extends StandardModule
 {
-    public function getBasePath()
-    {
-        return __DIR__;
-    }
-
-    public function getAutoloaderConfig()
-    {
-        return array(
-            'Zend\Loader\StandardAutoloader' => array(
-                'namespaces' => array(
-                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
-                ),
-            ),
-        );
-    }
-
     public function getConfig()
     {
         return [
+            /**
+             * version, base_path, and namespace are the minimum required nodes
+             */
             'version' => '0.1.0',
-            'navigation' => [
-                'main' => [
-                    'helloworld' => [
-                        'label' => 'Hello World',
-                        'route' => 'helloworld',
-                    ],
-                ],
-            ],
+            'base_path' => __DIR__,
+            'namespace' => __NAMESPACE__,
+
+            /**
+             * Establishes the "/hello-world" route
+             */
             'router' => [
                 'routes' => [
                     'helloworld' => [
@@ -91,6 +76,10 @@ class Module extends StandardModule
                     ],
                 ],
             ],
+
+            /**
+             * Tell the service manager how to create the controller.
+             */
             'controllers' => [
                 'invokables' => [
                     'HelloWorld\Controller\HelloWorldController' =>
@@ -101,6 +90,11 @@ class Module extends StandardModule
     }
 }
 ```
+
+@todo Remove the requirement to include the "controllers" node and fall back to the DI
+      container.
+@todo Add generic catch-all route module/controller/action and remove the route entirely
+      from this module config.
 
 ## Create the Controller
 
