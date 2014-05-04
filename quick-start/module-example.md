@@ -1,6 +1,6 @@
 # A Basic Module Example
 
-We will build an HelloWorld module. This is the minimum required to create a Forge module.
+We will build a HelloWorld module. This is the minimum required to create a Forge module.
 
 ## Inform the Application
 
