@@ -4,11 +4,11 @@ We will build an HelloWorld module. This is the minimum required to create a For
 
 ## Inform the Application
 
-First, we add the module to application.global.config.php to make the application aware of it.
+First, we add the module to application.global.php to make the application aware of it.
 
 ```php
 <?php
-// configs/application.global.config.php
+// configs/application.global.php
 
 return [
     'modules' => [
