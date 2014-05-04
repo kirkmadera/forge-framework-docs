@@ -28,7 +28,7 @@ The *Criteria* constructor is flexible and will respond to the following argumen
 
 ```php
 <?php
-// Retrieve user data link to a user with the id 123 and return as a User entity
+// Retrieve user with the id 123 and return as a User entity
 $criteria = new Criteria();
 $criteria->addFilter('id', '==', 123);
 $userMapper = $this->getServiceLocator('ForgeUser\Mapper\User');
@@ -49,7 +49,6 @@ extremely verbose.
 ```php
 <?php
 $criteria = new Criteria(['id' => 123]);
-$userMapper = $this->getServiceLocator('ForgeUser\Mapper\User');
 $user = $userMapper->find($criteria);
 ```
 
@@ -65,7 +64,6 @@ $user = $userMapper->find($criteria);
 
 ```php
 <?php
-$userMapper = $this->getServiceLocator('ForgeUser\Mapper\User');
 $user = $userMapper->find(123);
 ```
 
@@ -157,8 +155,8 @@ from property.
 ```php
 <?php
 /**
- * Find all enabled users with their role name, sorted by last name, then first name. Role is a
- * related entity to user.
+ * Find all enabled users with their role name, sorted by last name, then first name. Role is
+ * a related entity to user.
  */
 $criteria = new Criteria();
 $criteria->addDataKey('role.name')
