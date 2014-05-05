@@ -58,26 +58,6 @@ class Module extends StandardModule
             'namespace' => __NAMESPACE__,
 
             /**
-             * Establishes the "/hello-world" route
-             */
-            'router' => [
-                'routes' => [
-                    'helloworld' => [
-                        'type' => 'literal',
-                        'options' => [
-                            'route'    => '/hello-world',
-                            'defaults' => [
-                                '__NAMESPACE__' => 'HelloWorld\Controller',
-                                'module'        => 'HelloWorld',
-                                'controller'    => 'HelloWorldController',
-                                'action'        => 'index',
-                            ],
-                        ],
-                    ],
-                ],
-            ],
-
-            /**
              * Tell the service manager how to create the controller.
              */
             'controllers' => [
@@ -93,8 +73,6 @@ class Module extends StandardModule
 
 @todo Remove the requirement to include the "controllers" node and fall back to the DI
       container.
-@todo Add generic catch-all route module/controller/action and remove the route entirely
-      from this module config.
 
 ## Create the Controller
 
@@ -102,13 +80,13 @@ Now, we can create a controller. It will do nothing other than return a composit
 
 ```php
 <?php
-// modules/local/HelloWorld/src/Controller/HelloWorldController.php
+// modules/local/HelloWorld/src/Controller/Index.php
 
 namespace HelloWorld\Controller;
 
 use Forge\Mvc\Controller\ActionController;
 
-class HelloWorldController extends ActionController
+class Index extends ActionController
 {
     public function indexAction()
     {
@@ -123,7 +101,7 @@ The view is made up of two pieces. A view template and view configuration. First
 
 ```php
 <?php
-// modules/local/HelloWorld/design/frontend/abstract/view/helloworld/index.phtml
+// modules/local/HelloWorld/design/frontend/abstract/view/helloworld/index/index.phtml
 ?>
 Hello World!
 ```
@@ -135,11 +113,11 @@ Then we create the view configuration to include the template within the view an
 // modules/local/HelloWorld/design/frontend/abstract/config/view.config.php
 
 return [
-    'helloworld_helloworld_index' => [
+    'helloworld_index_index' => [
         'priority' => 10,
         'conditions' => [
             'module' => 'hello-world',
-            'controller' => 'hello-world',
+            'controller' => 'index',
             'action' => 'index',
         ],
         'updates' => [
@@ -158,7 +136,7 @@ return [
                     'main_content_children' => [
                         'children' => [
                             'content' => [
-                                'template' => 'helloworld/index',
+                                'template' => 'helloworld/index/index',
                             ],
                         ],
                     ],
