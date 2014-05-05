@@ -62,8 +62,7 @@ class Module extends StandardModule
              */
             'controllers' => [
                 'invokables' => [
-                    'HelloWorld\Controller\HelloWorldController' =>
-                        'HelloWorld\Controller\HelloWorldController',
+                    'HelloWorld\Controller\Index' => 'HelloWorld\Controller\Index',
                 ],
             ],
         ];
