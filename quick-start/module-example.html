@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="3.3" data-basepath=".." data-revision="1399226250582">
+    <div class="book" data-github="kirkmadera/forge-framework-docs" data-level="3.3" data-basepath=".." data-revision="1399270357009">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -469,26 +469,6 @@ module and include them in the getConfig() method.</p>
             <span class="hljs-string">'namespace'</span> =&gt; <span class="hljs-keyword">__NAMESPACE__</span>,
 
             <span class="hljs-comment">/**
-             * Establishes the "/hello-world" route
-             */</span>
-            <span class="hljs-string">'router'</span> =&gt; [
-                <span class="hljs-string">'routes'</span> =&gt; [
-                    <span class="hljs-string">'helloworld'</span> =&gt; [
-                        <span class="hljs-string">'type'</span> =&gt; <span class="hljs-string">'literal'</span>,
-                        <span class="hljs-string">'options'</span> =&gt; [
-                            <span class="hljs-string">'route'</span>    =&gt; <span class="hljs-string">'/hello-world'</span>,
-                            <span class="hljs-string">'defaults'</span> =&gt; [
-                                <span class="hljs-string">'__NAMESPACE__'</span> =&gt; <span class="hljs-string">'HelloWorld\Controller'</span>,
-                                <span class="hljs-string">'module'</span>        =&gt; <span class="hljs-string">'HelloWorld'</span>,
-                                <span class="hljs-string">'controller'</span>    =&gt; <span class="hljs-string">'HelloWorldController'</span>,
-                                <span class="hljs-string">'action'</span>        =&gt; <span class="hljs-string">'index'</span>,
-                            ],
-                        ],
-                    ],
-                ],
-            ],
-
-            <span class="hljs-comment">/**
              * Tell the service manager how to create the controller.
              */</span>
             <span class="hljs-string">'controllers'</span> =&gt; [
@@ -502,19 +482,17 @@ module and include them in the getConfig() method.</p>
 }
 </code></pre>
 <p>@todo Remove the requirement to include the &quot;controllers&quot; node and fall back to the DI
-      container.
-@todo Add generic catch-all route module/controller/action and remove the route entirely
-      from this module config.</p>
+      container.</p>
 <h2 id="create-the-controller">Create the Controller</h2>
 <p>Now, we can create a controller. It will do nothing other than return a composite view.</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
-<span class="hljs-comment">// modules/local/HelloWorld/src/Controller/HelloWorldController.php</span>
+<span class="hljs-comment">// modules/local/HelloWorld/src/Controller/Index.php</span>
 
 <span class="hljs-keyword">namespace</span> <span class="hljs-title">HelloWorld</span>\<span class="hljs-title">Controller</span>;
 
 <span class="hljs-keyword">use</span> <span class="hljs-title">Forge</span>\<span class="hljs-title">Mvc</span>\<span class="hljs-title">Controller</span>\<span class="hljs-title">ActionController</span>;
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorldController</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ActionController</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Index</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ActionController</span>
 {</span>
     <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">indexAction</span><span class="hljs-params">()</span>
     {</span>
@@ -525,7 +503,7 @@ module and include them in the getConfig() method.</p>
 <h2 id="create-the-view">Create the View</h2>
 <p>The view is made up of two pieces. A view template and view configuration. First, we will create the template.</p>
 <pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
-<span class="hljs-comment">// modules/local/HelloWorld/design/frontend/abstract/view/helloworld/index.phtml</span>
+<span class="hljs-comment">// modules/local/HelloWorld/design/frontend/abstract/view/helloworld/index/index.phtml</span>
 <span class="hljs-preprocessor">?&gt;</span>
 Hello World!
 </code></pre>
@@ -534,11 +512,11 @@ Hello World!
 <span class="hljs-comment">// modules/local/HelloWorld/design/frontend/abstract/config/view.config.php</span>
 
 <span class="hljs-keyword">return</span> [
-    <span class="hljs-string">'helloworld_helloworld_index'</span> =&gt; [
+    <span class="hljs-string">'helloworld_index_index'</span> =&gt; [
         <span class="hljs-string">'priority'</span> =&gt; <span class="hljs-number">10</span>,
         <span class="hljs-string">'conditions'</span> =&gt; [
             <span class="hljs-string">'module'</span> =&gt; <span class="hljs-string">'hello-world'</span>,
-            <span class="hljs-string">'controller'</span> =&gt; <span class="hljs-string">'hello-world'</span>,
+            <span class="hljs-string">'controller'</span> =&gt; <span class="hljs-string">'index'</span>,
             <span class="hljs-string">'action'</span> =&gt; <span class="hljs-string">'index'</span>,
         ],
         <span class="hljs-string">'updates'</span> =&gt; [
@@ -557,7 +535,7 @@ Hello World!
                     <span class="hljs-string">'main_content_children'</span> =&gt; [
                         <span class="hljs-string">'children'</span> =&gt; [
                             <span class="hljs-string">'content'</span> =&gt; [
-                                <span class="hljs-string">'template'</span> =&gt; <span class="hljs-string">'helloworld/index'</span>,
+                                <span class="hljs-string">'template'</span> =&gt; <span class="hljs-string">'helloworld/index/index'</span>,
                             ],
                         ],
                     ],
